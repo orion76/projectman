@@ -1,0 +1,33 @@
+entity.enumerate.add_form:
+  route_name: entity.enumerate.add_page
+  title: 'Add Enumerate'
+  appears_on:
+    - entity.enumerate.collection
+
+entity.enumerate.add_category:
+  route_name: entity.taxonomy_term.add_form
+  title: 'Add category'
+  class: '\Drupal\enumerate\Plugin\Menu\LocalAction\WithDestination'
+  appears_on:
+    - entity.enumerate.collection
+  route_parameters:
+      taxonomy_vocabulary: enumerate
+
+entity.enumerate_type.add_form:
+  route_name: entity.enumerate_type.add_form
+  title: 'Add Enumerate type'
+  appears_on:
+    - entity.enumerate_type.collection
+
+entity.enumerate_item.add_form:
+  route_name: entity.enumerate_item.add_page
+  title: 'Add Enumerate item'
+  appears_on:
+    - entity.enumerate_item.collection
+
+entity.enumerate_item_type.add_form:
+  route_name: entity.enumerate_item_type.add_form
+  title: 'Add Enumerate item type'
+  appears_on:
+    - entity.enumerate_item_type.collection
+

@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Adminimal theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function druda_adminimal_theme_preprocess_html(&$variables) {
+  $sidebars = 0;
+  foreach (['sidebar_first', 'sidebar_second'] as $region) {
+    if (!isset($variables['page'][$region]) || empty($variables['page'][$region])) {
+      continue;
+    }
+    $sidebars++;
+  }
+
+  if (empty($variables['attributes'])) {
+    $variables['attributes'] = new Attribute();
+  }
+
+  $variables['attributes']->addClass("sidebars-count-{$sidebars}");
+
+  /** @var $context \Drupal\Core\Plugin\Context\Context[] */
+  $context = Drupal::service('etree_context.context_route')->getRuntimeContextsValues(['etree', 'etree_action']);
+
+  if ($context['etree_action']) {
+    $variables['attributes']->addClass("etree-page-{$context['etree_action']}");
+  }
+
+  if ($context['etree']) {
+    $bundle = str_replace('_', '-', $context['etree']->bundle());
+    $variables['attributes']->addClass("etree-bundle-{$bundle}");
+  }
+  $n = 0;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function druda_adminimal_theme_preprocess_page(&$variables) {
+  $n = 0;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function druda_adminimal_theme_preprocess_form_element_label(&$variables) {
+
+  if (isset($variables['element']['#description'])) {
+    $variables['description'] = $variables['element']['#description'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function druda_adminimal_theme_preprocess_form_element(&$variables) {
+
+  // Add adminimal class to the body.
+  if (isset($variables['label']) && isset($variables['description'])) {
+    $variables['label']['#description'] = $variables['description'];
+  }
+
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function druda_adminimal_theme_preprocess_menu(&$variables) {
+
+  $n = 0;
+
+}

@@ -1,0 +1,31 @@
+.button-group {
+  a.button {
+    font-size: 1em;
+  }
+}
+
+a, input {
+  .button {
+    // border:1px solid #7ac;
+    box-shadow: 0 0 10px rgba(100, 100, 100, .5);
+  }
+
+  .button:hover {
+    // border:1px solid #7ac;
+    box-shadow: 0 0 8px rgba(100, 100, 100, .5);
+  }
+}
+
+.form-actions {
+  display: flex;
+  padding-top: 1rem;
+
+  .button {
+    margin-left: 1rem;
+  }
+}
+
+button.ui-widget {
+  background-color: $button-background;
+
+}

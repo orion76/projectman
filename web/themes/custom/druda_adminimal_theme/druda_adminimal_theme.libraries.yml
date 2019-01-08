@@ -1,0 +1,8 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/style.css: {}
+      fontawesome/css/fontawesome.css: {}
+      fontawesome/css/all.css: {}
+

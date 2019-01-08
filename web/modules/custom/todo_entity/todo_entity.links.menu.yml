@@ -1,0 +1,18 @@
+
+# Todo entity menu items definition
+entity.todo_entity.collection:
+  title: 'Todo entity list'
+  route_name: entity.todo_entity.collection
+  description: 'List Todo entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Todo entity type menu items definition
+entity.todo_entity_type.collection:
+  title: 'Todo entity type'
+  route_name: entity.todo_entity_type.collection
+  description: 'List Todo entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

@@ -1,0 +1,30 @@
+uuid: 36a84565-2f5f-46bc-ad21-201a95da799e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - comment.type.etree_comment
+    - field.field.comment.etree_comment.comment_body
+  module:
+    - text
+id: comment.etree_comment.default
+targetEntityType: comment
+bundle: etree_comment
+mode: default
+content:
+  author:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  subject: true

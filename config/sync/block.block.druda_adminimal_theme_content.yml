@@ -1,0 +1,22 @@
+uuid: a6032c90-2438-421f-9b18-9cc5e29e70f9
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - druda_adminimal_theme
+_core:
+  default_config_hash: OHNwA_gw7NrDymbvTpz6TvmREZlA3ixg7CIgxOJG8WE
+id: druda_adminimal_theme_content
+theme: druda_adminimal_theme
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

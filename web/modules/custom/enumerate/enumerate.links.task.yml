@@ -1,0 +1,78 @@
+# Enumerate routing definition
+
+
+entity.enumerate.collection:
+  route_name: entity.enumerate.collection
+  base_route: entity.enumerate.collection
+  title: 'Enumerates'
+
+# entity.enumerate.categories
+
+#entity.enumerate.categories:
+#  title: 'Categories'
+#  route_name: entity.enumerate.categories
+#  base_route: entity.enumerate.collection
+
+
+entity.enumerate_type.collection:
+  title: 'Enumerate bundles'
+  route_name: entity.enumerate_type.collection
+  base_route: entity.enumerate.collection
+
+
+entity.enumerate_item_type.collection:
+  title: 'Item bundles'
+  route_name: entity.enumerate_item_type.collection
+  base_route: entity.enumerate.collection
+
+
+entity.enumerate_type.edit_form:
+  title: 'Edit'
+  route_name: entity.enumerate_type.edit_form
+  base_route: entity.enumerate_type.edit_form
+
+entity.enumerate_item_type.edit_form:
+  title: 'Edit'
+  route_name: entity.enumerate_item_type.edit_form
+  base_route: entity.enumerate_item_type.edit_form
+
+
+entity.enumerate.edit_form:
+  route_name: entity.enumerate.edit_form
+  base_route: entity.enumerate.canonical
+  title: 'Edit'
+
+entity.enumerate.version_history:
+  route_name: entity.enumerate.version_history
+  base_route: entity.enumerate.canonical
+  title: 'Revisions'
+
+entity.enumerate.delete_form:
+  route_name:  entity.enumerate.delete_form
+  base_route:  entity.enumerate.canonical
+  title: Delete
+  weight: 10
+
+# Enumerate item routing definition
+
+entity.enumerate_item.canonical:
+  route_name: entity.enumerate_item.canonical
+  base_route: entity.enumerate_item.canonical
+  title: 'View'
+
+entity.enumerate_item.edit_form:
+  route_name: entity.enumerate_item.edit_form
+  base_route: entity.enumerate_item.canonical
+  title: 'Edit'
+
+entity.enumerate_item.version_history:
+  route_name: entity.enumerate_item.version_history
+  base_route: entity.enumerate_item.canonical
+  title: 'Revisions'
+
+entity.enumerate_item.delete_form:
+  route_name:  entity.enumerate_item.delete_form
+  base_route:  entity.enumerate_item.canonical
+  title: Delete
+  weight: 10
+

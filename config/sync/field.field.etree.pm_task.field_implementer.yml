@@ -1,0 +1,33 @@
+uuid: 43bb6c98-05ee-40fc-866c-afdffa87ed30
+langcode: ru
+status: true
+dependencies:
+  config:
+    - etree.etree_type.pm_task
+    - field.storage.etree.field_implementer
+id: etree.pm_task.field_implementer
+field_name: field_implementer
+entity_type: etree
+bundle: pm_task
+label: Исполнитель
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: role
+      role:
+        developer: developer
+        manager: manager
+        administrator: '0'
+        member: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

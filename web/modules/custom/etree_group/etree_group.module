@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains etree_group.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function etree_group_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the etree_group module.
+    case 'help.page.etree_group':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Etree entities groups') . '</p>';
+      return $output;
+
+    default:
+  }
+}

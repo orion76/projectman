@@ -1,0 +1,21 @@
+uuid: fca93503-076b-4f91-931a-7456639ed842
+langcode: ru
+status: true
+dependencies:
+  module:
+    - zurb_off_canvas
+  theme:
+    - druda_adminimal_theme
+id: zurboffcanvasbuttonleft
+theme: druda_adminimal_theme
+region: breadcrumb
+weight: -7
+provider: null
+plugin: zurb_off_canvas_button_left
+settings:
+  id: zurb_off_canvas_button_left
+  label: 'Zurb Off-canvas button Left'
+  provider: zurb_off_canvas
+  label_display: '0'
+  button_title: Проект
+visibility: {  }

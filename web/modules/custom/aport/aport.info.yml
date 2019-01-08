@@ -1,0 +1,5 @@
+name: 'aport'
+type: module
+description: 'alter migrate'
+core: 8.x
+package: 'aport'

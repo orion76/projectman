@@ -1,0 +1,199 @@
+.comment-form-wrapper {
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+}
+
+#entity-news-news-field-comments {
+  margin: 2rem 0;
+
+  .comment-form-wrapper {
+    margin: 2rem 0;
+  }
+}
+
+.comment__meta {
+  display: flex;
+
+  & > * {
+    margin-left: 1rem;
+  }
+  justify-content: flex-start;
+}
+
+.comment__links {
+
+  .dropdown-button {
+    color: #aaa;
+    font-size: 1.6em;
+
+    &::after {
+      border: none;
+    }
+  }
+}
+
+.comment__content {
+  display: flex;
+
+  article {
+    display: flex;
+  }
+}
+
+.comment-content-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul.comment-footer-links {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+
+  .flag-comment-dislike.action-flag {
+
+    a {
+      color: $palette-5-light;
+    }
+  }
+
+  .flag-comment-like.action-unflag {
+
+    a {
+      color: $palette-2;
+    }
+  }
+  .flag-comment-dislike.action-unflag {
+
+    a {
+      color: $palette-5;
+    }
+  }
+
+  li {
+    padding: 0 5px;
+
+    a {
+      color: $palette-2-light
+    }
+
+    .flag-comment-abuse {
+
+      a {
+        color: $palette-5-light
+      }
+    }
+
+    .flag-comment-abuse.action-unflag {
+
+      a {
+        color: $gray;
+      }
+    }
+  }
+}
+
+.field--name-comment-body {
+
+  .js-text-format-wrapper {
+    //max-width: 50%;
+  }
+
+  .cke_bottom {
+    padding: 0;
+  }
+
+  .filter-wrapper {
+    padding: 0 .4rem;
+    font-size: .8rem;
+    color: $gray;
+    background-color: $light-gray
+  }
+}
+
+.user-login-form {
+  display: flex;
+
+  & > .form-item {
+    width: 50%;
+  }
+
+  .form-item {
+    display: flex;
+
+    label {
+      width: 40%;
+    }
+
+    input {
+      width: 50%;
+    }
+
+  }
+
+  .form-actions {
+    padding: 0;
+    width: 45%;
+  }
+}
+
+.vertical-tabs__panes {
+  padding: 1rem;
+}
+
+.user-register-form {
+  display: flex;
+
+  & > .form-item {
+    width: 50%;
+  }
+
+  .form-item {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      width: 15%;
+    }
+
+    input {
+      width: 20%;
+    }
+
+    .description {
+      color: #999;
+      width: 60%;
+    }
+
+  }
+
+  .form-actions {
+    padding: 0;
+
+  }
+}
+
+.comments-wrapper {
+  .indented {
+    padding-left: 2rem;
+  }
+  .comment-wrapper {
+    border: 10px solid #ddd;
+    padding: .5rem;
+    margin-bottom: -.5rem;
+
+    .comment-footer-links {
+      margin: 0;
+    }
+  }
+}
+
+.user-logged-in {
+
+  .comment-user-login {
+    display: none;
+  }
+}

@@ -1,0 +1,5 @@
+name: 'zurb_library'
+type: module
+description: 'Zurb Foundation library helper'
+core: 8.x
+package: 'zurb'

@@ -1,0 +1,6 @@
+entity.etree_group.add_form:
+  route_name: entity.etree_group.add_form
+  title: 'Add Etree group'
+  appears_on:
+    - entity.etree_group.collection
+

@@ -1,0 +1,67 @@
+Извиняюсь за мой английский, мне google транслайте помогал-)
+
+Столкнулся в подобной ошибкой.
+
+У меня пробллема была в custom ContentEntity (сгенерированной при помощи друпал console)
+
+Я переопределил конструктор  ContentEntity.
+
+При добавлении конструктора, воспользовался функцией IDE (PHPStorm) вставки "родительского" метода.
+
+  public function __construct(array $values, $entity_type, $bundle = FALSE, array $translations = []) {
+    parent::__construct($values, $entity_type, $bundle, $translations);
+    $this->hierarchy_data = new ETreeHierarchyData($bundle);
+  }
+
+Т.к. в родительском конструкторе у параметра $bundle по умолчанию значение FALSE, то IDE вставила тип переменной $bundle - bool:
+public function __construct(array $values, $entity_type, bool $bundle = FALSE, array $translations = [])
+
+По-этому, если  $bundle !== FALSE (а равно типу сущности(строка)), то значение $bundle преобразуется в TRUE
+и метод ContentEntityBase:
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFieldDefinitions() {
+    if (!isset($this->fieldDefinitions)) {
+      $this->fieldDefinitions = $this->entityManager()->getFieldDefinitions($this->entityTypeId, $this->bundle());
+    }
+    return $this->fieldDefinitions;
+  }
+
+  не "находит" определения полей для $this->bundle(), т.к. $this->bundle() === TRUE
+
+===========================
+
+I apologize for my English, I google translate help-)
+
+Faced with a similar error.
+
+I had a problem in custom ContentEntity (generated using the drupal console)
+
+I have redefined the ContentEntity constructor.
+
+When adding a constructor, I used the IDE (PHPStorm) function to insert the "parent" method.
+
+  public function __construct (array $values, $entity_type, $bundle = FALSE, array $translations = []) {
+    parent :: __ construct ($values, $entity_type, $bundle, $translations);
+    $this->hierarchy_data = new ETreeHierarchyData ($bundle);
+  }
+
+Since in the parent constructor, the default value for the $bundle parameter is FALSE, then the IDE inserted the type of the $bundle variable: bool:
+public function __construct (array $values, $entity_type, bool $bundle = FALSE, array $translations = [])
+
+Therefore, if $bundle! == FALSE (equal to the type of the entity (string)), then the value of $bundle is converted to TRUE
+and the ContentEntityBase method:
+
+  / **
+   * {@inheritdoc}
+   * /
+  public function getFieldDefinitions() {
+    if (! isset ($this->fieldDefinitions)) {
+      $this->fieldDefinitions = $this->entityManager()->getFieldDefinitions ($this->entityTypeId, $this->bundle());
+    }
+    return $this->fieldDefinitions;
+  }
+
+  does not "find" field definitions for $this->bundle(), because $this->bundle() === TRUE

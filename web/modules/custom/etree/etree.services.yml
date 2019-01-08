@@ -1,0 +1,8 @@
+services:
+  etree.event_subscriber:
+    class: Drupal\etree\EventSubscriber\ETreeEventSubscriber
+    tags:
+     - { name: event_subscriber }
+  plugin.manager.etree_routes:
+    class: Drupal\etree\Plugin\ETreeRoutesPluginManager
+    parent: default_plugin_manager

@@ -1,0 +1,20 @@
+uuid: 4f451dbb-94cd-4de8-a807-3c881d1b3793
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - druda_adminimal_theme
+_core:
+  default_config_hash: ntprplyvgWXvUHoyJIjUxm9Dmt2FDp2jPHW9IBS5NSs
+id: druda_adminimal_theme_local_actions
+theme: druda_adminimal_theme
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

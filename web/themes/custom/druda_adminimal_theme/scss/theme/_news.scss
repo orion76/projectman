@@ -1,0 +1,24 @@
+.news-top-info {
+  @include xy-grid;
+  justify-content: flex-end;
+
+  .field-wrapper {
+    @include xy-grid;
+    padding: .5rem 1rem;
+
+    .field-label {
+      padding-right: .2rem;
+      color: $palette-1;
+
+      &::after {
+        content: ':'
+      }
+    }
+
+    .field-item {
+      a {
+        color: $palette-2-light;
+      }
+    }
+  }
+}

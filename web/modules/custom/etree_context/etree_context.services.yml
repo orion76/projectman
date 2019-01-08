@@ -1,0 +1,9 @@
+services:
+  etree_context.context_route:
+    class: 'Drupal\etree_context\Context\ETreeRouteContext'
+    arguments: ['@current_route_match']
+    tags:
+      - { name: 'context_provider' }
+  plugin.manager.etree_context:
+    class: Drupal\etree_context\Plugin\ETreeContextPluginManager
+    parent: default_plugin_manager

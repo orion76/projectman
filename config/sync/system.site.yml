@@ -1,0 +1,14 @@
+uuid: 31bbe8b7-5562-4620-a276-f4b5ceae7771
+name: ProjectMan
+mail: gpb@yandex.ru
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

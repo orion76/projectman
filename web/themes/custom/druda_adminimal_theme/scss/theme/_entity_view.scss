@@ -1,0 +1,42 @@
+.footer-item {
+  @include xy-grid;
+  border-bottom: 1px $dark-gray dotted;
+
+  .field-label {
+    @include xy-cell(5);
+  }
+
+  .field-items {
+    @include xy-cell(7);
+  }
+}
+
+.teaser-top {
+  border-bottom: 5px solid $medium-gray;
+  border-top: 3x solid $medium-gray;
+  padding: 0 0 0 1.5em;
+  @include xy-grid;
+}
+
+.teaser-footer {
+  background: $medium-gray;
+  padding: 10px;
+}
+
+.entity_solution {
+
+  .teaser-top {
+
+    .field-name-name {
+      @include xy-cell(9);
+    }
+
+    .field-name-to-order {
+      @include xy-cell(3);
+    }
+  }
+}
+
+.solution-container {
+  padding: 1rem 0;
+}

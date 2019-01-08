@@ -1,0 +1,30 @@
+add etree entities:
+  title: 'Create new ETree entities'
+
+administer etree entities:
+  title: 'Administer ETree entities'
+  description: 'Allow to access the administration form to configure ETree entities.'
+  restrict access: true
+
+delete etree entities:
+  title: 'Delete ETree entities'
+
+edit etree entities:
+  title: 'Edit ETree entities'
+
+view published etree entities:
+  title: 'View published ETree entities'
+
+view unpublished etree entities:
+  title: 'View unpublished ETree entities'
+
+view all etree revisions:
+  title: 'View all ETree revisions'
+
+revert all etree revisions:
+  title: 'Revert all ETree revisions'
+  description: 'Role requires permission <em>view ETree revisions</em> and <em>edit rights</em> for etree entities in question or <em>administer etree entities</em>.'
+
+delete all etree revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view ETree revisions</em> and <em>delete rights</em> for etree entities in question or <em>administer etree entities</em>.'

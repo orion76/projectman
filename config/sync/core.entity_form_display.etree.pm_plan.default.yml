@@ -1,0 +1,182 @@
+uuid: d3a626e7-0dbd-45cc-bc20-234db31f3a8e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - etree.etree_type.pm_plan
+    - field.field.etree.pm_plan.field_comment
+    - field.field.etree.pm_plan.field_images
+    - field.field.etree.pm_plan.field_time_scheduled
+    - field.field.etree.pm_plan.field_time_spent
+    - image.style.thumbnail
+  module:
+    - comment
+    - etree_computed
+    - field_group
+    - insert
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_main
+        - group_settings
+      parent_name: ''
+      weight: 20
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: tabs
+    group_main:
+      children:
+        - name
+        - field_time_scheduled
+        - field_time_spent
+        - body
+        - field_images
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        label: Main
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Main
+    group_settings:
+      children:
+        - user_id
+        - etree_parent
+        - langcode
+        - status
+        - revision_log_message
+        - group_comments
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Settings
+    group_comments:
+      children:
+        - field_comment
+      parent_name: group_settings
+      weight: 7
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: false
+      label: Comments
+id: etree.pm_plan.default
+targetEntityType: etree
+bundle: pm_plan
+mode: default
+content:
+  body:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  etree_parent:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  field_comment:
+    type: comment_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_images:
+    type: insert_image
+    weight: 4
+    region: content
+    settings:
+      preview_image_style: thumbnail
+      insert_styles:
+        large: large
+        medium: medium
+        thumbnail: thumbnail
+        link: link
+        icon_link: icon_link
+        image: image
+      insert_default: large
+      insert_width: null
+      progress_indicator: throbber
+      insert_absolute: false
+      insert_rotate: false
+    third_party_settings: {  }
+  field_time_scheduled:
+    weight: 1
+    settings:
+      enabled: false
+      step: any
+    third_party_settings: {  }
+    type: etree_computed_time
+    region: content
+  field_time_spent:
+    weight: 2
+    settings:
+      enabled: false
+      step: any
+    third_party_settings: {  }
+    type: etree_computed_time
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 6
+    settings:
+      rows: 4
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

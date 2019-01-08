@@ -1,0 +1,10 @@
+uuid: a03d7356-f733-49d4-958c-38a1c7c4923e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - etree
+id: etree_type.token
+label: Token
+targetEntityType: etree_type
+cache: true

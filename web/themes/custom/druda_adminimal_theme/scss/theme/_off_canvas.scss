@@ -1,0 +1,19 @@
+.off-canvas {
+
+  button.close-button:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.off-canvas.sidebar {
+  background-color: $palette-4-light;
+}
+
+.etree-page-collection {
+
+  .off-canvas.position-right {
+    width: 30%;
+    background: #f5f5f5;
+  }
+}

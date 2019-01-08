@@ -1,0 +1,6 @@
+uuid: f9bf5c3a-2e76-4555-ad15-85c07c0d0ff9
+langcode: ru
+status: true
+dependencies: {  }
+id: pm_plan
+label: Задача

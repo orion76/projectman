@@ -1,0 +1,43 @@
+name: Druda Adminimal
+type: theme
+description: 'Drupal administration theme with modern minimalist design.'
+# core: 8.x
+base theme: seven
+
+libraries:
+  - druda_adminimal_theme/global-styling
+
+stylesheets-remove:
+  - 'core/themes/seven/css/components/tables.css'
+  - 'core/themes/seven/css/components/dialog.css'
+  - 'core/themes/seven/css/components/buttons.css'
+  - 'core/themes/seven/css/components/tabs.css'
+  - 'core/themes/classy/css/components/tabs.css'
+  - 'core/themes/stable/css/ckeditor/ckeditor.admin.css'
+  - 'core/themes/seven/css/components/form.css'
+#  - 'core/themes/seven/css/components/jquery.ui/theme.css'
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  toolbar_top: 'Toolbar top'
+  toolbar_top_right: 'Toolbar top right'
+  toolbar_top_center: 'Toolbar top center'
+  toolbar_top_left: 'Toolbar top left'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  off_canvas_left: 'Off-canvas left'
+  off_canvas_right: 'Off-canvas right'
+  off_canvas_top: 'Off-canvas top'
+  off_canvas_bottom: 'Off-canvas bottom'
+
+# Information added by Drupal.org packaging script on 2016-11-30
+version: '8.x-1.3'
+core: '8.x'
+project: 'druda_adminimal_theme'
+datestamp: 1480507087

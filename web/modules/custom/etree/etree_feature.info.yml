@@ -1,0 +1,6 @@
+name: etree
+type: module
+core: 8.x
+dependencies:
+  - etree
+version: 8.x-0.2

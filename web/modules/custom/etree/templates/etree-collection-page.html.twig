@@ -1,0 +1,30 @@
+{#
+/**
+ * @file etree.html.twig
+ * Default theme implementation to present ETree data.
+ *
+ * This template is used when viewing ETree pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_etree()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('etree-collection-page') }}>
+    <div class="collection">
+        {% if collection %}
+            {{- collection -}}
+        {% endif %}
+    </div>
+    <div class="overview">
+        {% if overview %}
+            {{- overview -}}
+        {% endif %}
+    </div>
+
+</div>

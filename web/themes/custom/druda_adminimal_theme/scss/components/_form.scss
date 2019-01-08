@@ -1,0 +1,76 @@
+
+.form-row .details-wrapper {
+
+  display: flex;
+
+  .form-item {
+    padding: 0 1rem;
+  }
+}
+
+.form-item {
+  input[type="text"], select {
+    min-width: 10em;
+  }
+  label {
+    font-weight: 700;
+
+  }
+
+  .input {
+    margin: 6px;
+  }
+
+}
+
+label {
+
+  &:hover {
+
+    .description {
+      visibility: visible;
+    }
+  }
+
+  .description {
+
+    // width: 120px;
+    background-color: $black;
+    color: $white;
+
+    padding: 1em;
+    border-radius: 6px;
+    font-size: $cite-font-size;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+
+  }
+
+}
+
+@mixin input-with-description() {
+
+  align-items: center;
+  display: flex;
+
+  .description-wrapper {
+    padding: 0 .5em
+  }
+
+  .form-textarea-wrapper {
+    width: 100%;
+  }
+
+}
+
+.js-form-type-textfield, .js-form-type-entity-autocomplete {
+  @include input-with-description();
+  label {
+    padding-right: 1rem;
+  }
+
+  input {
+    margin: 0;
+  }
+}

@@ -1,0 +1,29 @@
+uuid: b4c9ebe8-ae9b-4485-a5dd-2de905e0ae68
+langcode: ru
+status: true
+dependencies:
+  config:
+    - comment.type.etree_comment
+    - core.entity_view_mode.comment.full
+    - field.field.comment.etree_comment.comment_body
+  module:
+    - text
+id: comment.etree_comment.full
+targetEntityType: comment
+bundle: etree_comment
+mode: full
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

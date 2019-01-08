@@ -1,0 +1,19 @@
+#etree.collection.overview:
+#  path: '/admin/content/etree/{etree}'
+#  defaults:
+#    _controller: '\Drupal\etree\Controller\ETreeController::collectionOverview'
+#    _title: 'Aggregator'
+#  requirements:
+#    _permission: 'administer news feeds'
+entity.etree.collection.overview:
+  path: '/admin/content/etree/overview/{etree}'
+  defaults:
+    _title: 'Load content Ajax link'
+    _controller: '\Drupal\etree\Controller\ETreeController::collectionOverview'
+  requirements:
+    _permission: 'access content'
+
+route_callbacks:
+  - '\Drupal\etree\Routing\ETreeRouteSubscriber::routes'
+
+

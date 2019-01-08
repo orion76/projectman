@@ -1,0 +1,8 @@
+name: 'etree'
+type: module
+description: 'Entity Tree module'
+dependencies:
+  - drupal:views
+  - drupal:views_bulk_operations
+core: 8.x
+package: 'etree'

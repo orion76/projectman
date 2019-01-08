@@ -1,0 +1,28 @@
+uuid: 2d10f1ed-5d91-491e-9390-4ba18fe793e3
+langcode: ru
+status: true
+dependencies:
+  module:
+    - etree_links
+    - user
+  theme:
+    - druda_adminimal_theme
+id: etreelocalactionsblock
+theme: druda_adminimal_theme
+region: content
+weight: -5
+provider: null
+plugin: etree_links_local_actions_block
+settings:
+  id: etree_links_local_actions_block
+  label: 'ETree local actions block'
+  provider: etree_links
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

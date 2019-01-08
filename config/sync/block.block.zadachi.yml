@@ -1,0 +1,24 @@
+uuid: 94e7aceb-8ef7-41f4-8173-9391989deed8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.pm-tasks
+  module:
+    - system
+  theme:
+    - druda_adminimal_theme
+id: zadachi
+theme: druda_adminimal_theme
+region: off_canvas_left
+weight: -7
+provider: null
+plugin: 'system_menu_block:pm-tasks'
+settings:
+  id: 'system_menu_block:pm-tasks'
+  label: Задачи
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

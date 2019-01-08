@@ -1,0 +1,9 @@
+uuid: d9a0efaf-90c5-4948-88db-124b59570dfc
+langcode: ru
+status: true
+dependencies: {  }
+id: developer
+label: developer
+weight: 4
+is_admin: null
+permissions: {  }

@@ -1,0 +1,32 @@
+
+.top-bar {
+  a {
+    color: $palette-3
+  }
+  .dropdown {
+
+    &.menu {
+      a {
+        background-color: $palette-1;
+
+        &:hover {
+          background-color: $palette-1-light;
+          color: $palette-3-light;
+        }
+      }
+    }
+  }
+  .block-druda-zurb-account-menu {
+    a{
+      color: $palette-1-light;
+      &:hover{
+        color: $palette-2-light;
+      }
+    }
+
+  }
+}
+
+.toolbar-menu>li>a{
+  padding:8px 5px
+}

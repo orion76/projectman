@@ -1,0 +1,22 @@
+uuid: 8e9eac65-7fea-40d4-ae31-8e8428492009
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - druda_adminimal_theme
+_core:
+  default_config_hash: tkGE3K6OXkg3JNJPAyYZA5bHm075kpFouAgNWJe0-bs
+id: druda_adminimal_theme_secondary_local_tasks
+theme: druda_adminimal_theme
+region: pre_content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

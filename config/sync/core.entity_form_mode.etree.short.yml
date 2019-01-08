@@ -1,0 +1,10 @@
+uuid: f639c8dd-fb32-4497-a621-ffff767bceff
+langcode: ru
+status: true
+dependencies:
+  module:
+    - etree
+id: etree.short
+label: short
+targetEntityType: etree
+cache: true

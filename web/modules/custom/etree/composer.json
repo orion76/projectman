@@ -1,0 +1,14 @@
+{
+  "name": "drupal/etree",
+  "type": "drupal-module",
+  "description": "Entity Tree module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/etree",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/etree",
+    "source": "http://cgit.drupalcode.org/etree"
+  },
+  "require": { }
+}

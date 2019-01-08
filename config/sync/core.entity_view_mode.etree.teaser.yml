@@ -1,0 +1,10 @@
+uuid: 05f9dd2c-688a-450a-8a77-539518ae0ca5
+langcode: ru
+status: true
+dependencies:
+  module:
+    - etree
+id: etree.teaser
+label: teaser
+targetEntityType: etree
+cache: true

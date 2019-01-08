@@ -1,0 +1,29 @@
+# Local development services.
+#
+# To activate this feature, follow the instructions at the top of the
+# 'example.settings.local.php' file, which sits next to this file.
+parameters:
+  http.response.debug_cacheability_headers: true
+  twig.config:
+      # Twig debugging:
+      #
+      # When debugging is enabled:
+      # - The markup of each Twig template is surrounded by HTML comments that
+      #   contain theming information, such as template file name suggestions.
+      # - Note that this debugging markup will cause automated tests that directly
+      #   check rendered HTML to fail. When running automated tests, 'debug'
+      #   should be set to FALSE.
+      # - The dump() function can be used in Twig templates to output information
+      #   about template variables.
+      # - Twig templates are automatically recompiled whenever the source code
+      #   changes (see auto_reload below).
+      #
+      # For more information about debugging Twig templates, see
+      # https://www.drupal.org/node/1906392.
+      #
+      # Not recommended in production environments
+      # @default false
+      debug: true
+services:
+  cache.backend.null:
+    class: Drupal\Core\Cache\NullBackendFactory

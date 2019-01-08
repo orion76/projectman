@@ -1,0 +1,7 @@
+name: 'etree_context'
+type: module
+description: 'ETree Context'
+core: 8.x
+package: 'etree'
+dependencies:
+  - etree

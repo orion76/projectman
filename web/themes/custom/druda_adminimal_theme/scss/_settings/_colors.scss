@@ -1,0 +1,77 @@
+// Palette 1  http://color.romanuke.com/tsvetovaya-palitra-3860/
+
+//$palette-1: #050831 !default;
+//$palette-2: #133072 !default;
+//$palette-3: #d5e6f7 !default;
+//$palette-4: #d5adfb !default;
+//$palette-5: #f90052 !default;
+
+// Palette 2  http://color.romanuke.com/tsvetovaya-palitra-3907/
+
+$palette-1: #3f882e !default;
+$palette-2: #aa4a16 !default;
+$palette-3: #fff100 !default;
+$palette-4: #00609d !default;
+$palette-5: #001f43 !default;
+
+// Palette 3  http://color.romanuke.com/tsvetovaya-palitra-3862/
+
+//$palette-1: #213036 !default;
+//$palette-2: #265500 !default;
+//$palette-3: #96d800 !default;
+//$palette-4: #f58f92 !default;
+//$palette-5: #b7241b !default;
+
+// Palette 4
+
+//$palette-1: #cbd58b !default;
+//$palette-2: #e1b4d3 !default;
+//$palette-3: #ba7ea7 !default;
+//$palette-4: #8d0a15 !default;
+//$palette-5: #43161d !default;
+
+//   Palette Current
+
+//$palette-1-dark: #53002e !default;
+//$palette-1: #8b004d !default;
+//$palette-1-light: #e90082 !default;
+//
+//$palette-2-dark: #513407 !default;
+//$palette-2: #c17b10 !default;
+//$palette-2-light: #ff970a !default;
+
+//  Palette nuances
+
+$part-dark: #333;
+$part-light: #555;
+
+$palette-1-dark: $palette-1 - $part-dark !default;
+$palette-1-light: $palette-1 + $part-light !default !default;
+
+$palette-2-dark: $palette-2 - $part-dark !default;
+$palette-2-light: $palette-2 + $part-light !default !default;
+
+$palette-3-dark: $palette-3 - $part-dark !default;
+$palette-3-light: $palette-3 + $part-light !default !default;
+
+$palette-4-dark: $palette-4 - $part-dark !default;
+$palette-4-light: $palette-4 + $part-light !default !default;
+
+$palette-5-dark: $palette-5 - $part-dark !default;
+$palette-5-light: $palette-5 + $part-light !default;
+
+$foundation-palette: (
+        primary: #63affe,
+        secondary: #767676,
+        success: #098c6a,
+        warning: #ffae00,
+        alert: #cc4b37,
+);
+$light-gray: #f7f7f7;
+$medium-gray: #eee;
+$gray: #999;
+$dark-gray: #555;
+$black: #111;
+$white: #fefefe;
+$body-background: $white;
+$body-font-color: $black;

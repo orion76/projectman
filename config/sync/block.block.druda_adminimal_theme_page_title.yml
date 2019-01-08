@@ -1,0 +1,20 @@
+uuid: 38d0a24e-2436-4c51-aa29-d65b2e576795
+langcode: ru
+status: true
+dependencies:
+  theme:
+    - druda_adminimal_theme
+_core:
+  default_config_hash: d998tULw49oaFbeZIaGqBtgzsBhf_Sm_NFzn-7UCPFU
+id: druda_adminimal_theme_page_title
+theme: druda_adminimal_theme
+region: toolbar_top_left
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

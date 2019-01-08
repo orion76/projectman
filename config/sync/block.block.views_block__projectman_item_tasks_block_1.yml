@@ -1,0 +1,39 @@
+uuid: 0c865419-d164-4196-896e-1d50b4bba3f0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.projectman_item_tasks
+  module:
+    - etree_context
+    - system
+    - views
+  theme:
+    - druda_adminimal_theme
+id: views_block__projectman_item_tasks_block_1
+theme: druda_adminimal_theme
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'views_block:projectman_item_tasks-block_1'
+settings:
+  id: 'views_block:projectman_item_tasks-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/project\r\n/project/*"
+    negate: false
+    context_mapping: {  }
+  etree_type:
+    id: etree_type
+    bundles:
+      pm_plan: pm_plan
+    negate: false
+    context_mapping:
+      etree: '@etree_context.context_route:etree'

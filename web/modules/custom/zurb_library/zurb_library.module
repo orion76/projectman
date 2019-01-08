@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains zurb_library.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zurb_library_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zurb_library module.
+    case 'help.page.zurb_library':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zurb Foundation library helper') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function zurb_library_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'zurb_library/ajax_command';
+  $n = 0;
+}

@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Contains etree_links.module.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function etree_links_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the etree_links module.
+    case 'help.page.etree_links':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('ETree customizable links') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function etree_links_theme() {
+  return [
+    'etree_links_local_actions' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+
+function template_preprocess_etree_links_local_actions(&$variables) {
+
+  $variables['content'] = [];
+  foreach (Element::children($variables['elements']) as $name) {
+    $variables['content'][] = $variables['elements'][$name];
+  }
+}
+
+function etree_links_block_load(&$entities) {
+
+}
+
+function etree_links_views_data_alter(&$data) {
+  $data['etree_hierarchy']['etree_link_collection_preview'] = [
+    'field' => [
+      'title' => t('Label with preview link'),
+      'help' => t('Label with preview link'),
+      'id' => 'etree_link_collection_preview',
+    ],
+  ];
+  $data['etree_hierarchy']['etree_operations'] = [
+    'field' => [
+      'title' => t('Etree entity operations'),
+      'help' => t('Etree entity operations'),
+      'id' => 'etree_operations',
+    ],
+  ];
+}

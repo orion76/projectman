@@ -1,0 +1,8 @@
+etree_group.local_tasks:
+  deriver: 'Drupal\etree_group\Plugin\Derivative\ETreeGroupLocalTask'
+  weight: 100
+
+entity.etree_group.collection:
+  route_name: entity.etree_group.collection
+  base_route: entity.etree_type.collection
+  title: 'Groups'

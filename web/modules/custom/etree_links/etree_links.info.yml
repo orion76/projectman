@@ -1,0 +1,8 @@
+name: 'etree_links'
+type: module
+description: 'ETree customizable links'
+core: 8.x
+package: 'etree'
+dependencies:
+  - etree
+  - etree_context

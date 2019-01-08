@@ -1,0 +1,67 @@
+uuid: d2581b42-2ce2-4ff5-abfd-424068a301cb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.etree.short
+    - etree.etree_type.pm_task
+    - field.field.etree.pm_task.field_implementer
+  module:
+    - text
+id: etree.pm_task.short
+targetEntityType: etree
+bundle: pm_task
+mode: short
+content:
+  body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      placeholder: ''
+    third_party_settings: {  }
+  etree_parent:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  field_implementer:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    settings:
+      rows: 4
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: -3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

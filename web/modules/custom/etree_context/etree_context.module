@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains etree_context.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function etree_context_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the etree_context module.
+    case 'help.page.etree_context':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('ETree Context') . '</p>';
+      return $output;
+
+    default:
+  }
+}

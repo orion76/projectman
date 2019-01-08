@@ -1,0 +1,16 @@
+# TODO Это аякс-ссылка для загрузки посмотра контента
+# Сделать универсальной, чтобы моэно було грузить любой контент, например указав в парамитрах
+# - entity_type
+# - entity ID
+# - вид просмотра (форма, отображение)
+# - режим просмотра (view mode)
+#
+entity.etree.collection.overview:
+  path: '/admin/content/etree/overview/{etree}'
+  defaults:
+    _title: 'Load content Ajax link'
+    _controller: '\Drupal\etree_links\Controller\AjaxOverview::collectionOverview'
+  requirements:
+    _permission: 'access content'
+
+

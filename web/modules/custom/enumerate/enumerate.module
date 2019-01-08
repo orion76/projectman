@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Contains enumerate.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function enumerate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the enumerate module.
+    case 'help.page.enumerate':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enumerate entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function enumerate_theme() {
+  $theme = [];
+  $theme['enumerate'] = [
+    'render element' => 'elements',
+    'file' => 'enumerate.page.inc',
+    'template' => 'enumerate',
+  ];
+  $theme['enumerate_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'enumerate.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function enumerate_theme_suggestions_enumerate(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#enumerate'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'enumerate__' . $sanitized_view_mode;
+  $suggestions[] = 'enumerate__' . $entity->bundle();
+  $suggestions[] = 'enumerate__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'enumerate__' . $entity->id();
+  $suggestions[] = 'enumerate__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function enumerate_theme_suggestions_enumerate_item(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#enumerate_item'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'enumerate_item__' . $sanitized_view_mode;
+  $suggestions[] = 'enumerate_item__' . $entity->bundle();
+  $suggestions[] = 'enumerate_item__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'enumerate_item__' . $entity->id();
+  $suggestions[] = 'enumerate_item__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+function enumerate_link_alter(&$variables) {
+  $n = 0;
+
+}

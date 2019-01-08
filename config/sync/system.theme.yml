@@ -1,0 +1,5 @@
+admin: druda_adminimal_theme
+default: druda_adminimal_theme
+_core:
+  default_config_hash: fOjer9hADYYnbCJVZMFZIIM1azTFWyg84ZkFDHfAbUg
+langcode: ru

@@ -1,0 +1,8 @@
+entity.etree_group.collection:
+  title: 'Etree group'
+  route_name: entity.etree_group.collection
+  description: 'List Etree group (bundles)'
+  parent: entity.etree_type.collection
+  weight: 99
+
+

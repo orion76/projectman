@@ -1,0 +1,57 @@
+[
+  {
+    "command": "settings",
+    "settings": {
+      "ajaxPageState": {
+        "theme": "druda_adminimal_theme",
+        "libraries": "admin_toolbar\/toolbar.tree,admin_toolbar_tools\/toolbar.icon,big_pipe\/big_pipe,classy\/base,classy\/messages,contextual\/drupal.contextual-links,contextual\/drupal.contextual-toolbar,core\/drupal.active-link,core\/drupal.collapse,core\/drupal.machine-name,core\/html5shiv,core\/jquery.form,core\/normalize,druda_adminimal_theme\/global-styling,seven\/global-styling,shortcut\/drupal.shortcut,toolbar\/toolbar,toolbar\/toolbar.escapeAdmin,tour\/tour,user\/drupal.user.icons,zurb_library\/ajax_command,zurb_library\/offcanvas"
+      },
+      "ajax": {
+        "edit-collection-views-add-new-button--4hd3n1lJ2JA": {
+          "wrapper": "views-collection",
+          "callback": "::loadViewsAjaxCallback",
+          "event": "mousedown",
+          "keypress": true,
+          "prevent": "click",
+          "url": "\/admin\/structure\/etree\/etree_group\/projectman\/edit?destination=\/admin\/structure\/etree\/etree_group\u0026ajax_form=1\u0026_wrapper_format=drupal_ajax",
+          "dialogType": "ajax",
+          "submit": {
+            "_triggering_element_name": "op",
+            "_triggering_element_value": "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c"
+          }
+        },
+        "edit-collection-views-0-view-id--TeITlsKWnZI": {
+          "callback": "::loadViewsDisplayAjaxCallback",
+          "wrapper": "collection-view-item-0",
+          "event": "change",
+          "url": "\/admin\/structure\/etree\/etree_group\/projectman\/edit?destination=\/admin\/structure\/etree\/etree_group\u0026ajax_form=1\u0026_wrapper_format=drupal_ajax",
+          "dialogType": "ajax",
+          "submit": {
+            "_triggering_element_name": "collection_views[0][view_id]"
+          }
+        }
+      },
+      "ajaxTrustedUrl": {
+        "\/admin\/structure\/etree\/etree_group\/projectman\/edit?destination=\/admin\/structure\/etree\/etree_group\u0026ajax_form=1\u0026_wrapper_format=drupal_ajax": true
+      },
+      "pluralDelimiter": "\u0003",
+      "user": {
+        "uid": "1",
+        "permissionsHash": "7ee88f91fa0c7e15281a3b1f624f2e24383f968c6a98f55ea7642fb3e03e5665"
+      }
+    },
+    "merge": true
+  },
+  {
+    "command": "update_build_id",
+    "old": "form-d-mw1rrI-h-j7n_cFGry2ZxAW643S_Rn61E5VyL-ZOE",
+    "new": "form-hDttBY1QX8hfn4DKJD5-bYO5pVtlgNE218Y7hFCRxjk"
+  },
+  {
+    "command": "insert",
+    "method": null,
+    "selector": null,
+    "data": "\n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027details\u0027 --\u003E\n\u003C!-- BEGIN OUTPUT from \u0027core\/themes\/seven\/templates\/details.html.twig\u0027 --\u003E\n\u003Cdetails data-drupal-selector=\u0022edit-collection-views\u0022 id=\u0022edit-collection-views--F1i0cgWkIi0\u0022 class=\u0022js-form-wrapper form-wrapper seven-details\u0022 open=\u0022open\u0022\u003E    \u003Csummary role=\u0022button\u0022 aria-controls=\u0022edit-collection-views--F1i0cgWkIi0\u0022 aria-expanded=\u0022true\u0022 aria-pressed=\u0022true\u0022 class=\u0022seven-details__summary\u0022\u003ECollections views\u003C\/summary\u003E\u003Cdiv class=\u0022seven-details__wrapper details-wrapper\u0022\u003E\n    \n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027details\u0027 --\u003E\n\u003C!-- BEGIN OUTPUT from \u0027core\/themes\/seven\/templates\/details.html.twig\u0027 --\u003E\n\u003Cdetails id=\u0022collection-view-item-0\u0022 data-drupal-selector=\u0022edit-collection-views-0\u0022 class=\u0022js-form-wrapper form-wrapper seven-details\u0022\u003E    \u003Csummary role=\u0022button\u0022 aria-controls=\u0022collection-view-item-0\u0022 aria-expanded=\u0022false\u0022 aria-pressed=\u0022false\u0022 class=\u0022seven-details__summary\u0022\u003EViews\u003C\/summary\u003E\u003Cdiv class=\u0022seven-details__wrapper details-wrapper\u0022\u003E\n    \n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027form_element\u0027 --\u003E\n\u003C!-- BEGIN OUTPUT from \u0027themes\/custom\/druda_adminimal_theme\/templates\/form-element.html.twig\u0027 --\u003E\n\u003Cdiv class=\u0022js-form-item form-item js-form-type-select form-item-collection-views-0-view-id js-form-item-collection-views-0-view-id\u0022\u003E\n            \n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027form_element_label\u0027 --\u003E\n\u003C!-- BEGIN OUTPUT from \u0027themes\/custom\/druda_adminimal_theme\/templates\/form-element-label.html.twig\u0027 --\u003E\n\n\n\u003Clabel for=\u0022edit-collection-views-0-view-id--TeITlsKWnZI\u0022\u003E\n        \u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\n            \u003C\/label\u003E\n\u003C!-- END OUTPUT from \u0027themes\/custom\/druda_adminimal_theme\/templates\/form-element-label.html.twig\u0027 --\u003E\n\n\n        \n    \n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027select\u0027 --\u003E\n\u003C!-- BEGIN OUTPUT from \u0027core\/themes\/classy\/templates\/form\/select.html.twig\u0027 --\u003E\n\u003Cselect data-drupal-selector=\u0022edit-collection-views-0-view-id\u0022 id=\u0022edit-collection-views-0-view-id--TeITlsKWnZI\u0022 name=\u0022collection_views[0][view_id]\u0022 class=\u0022form-select\u0022\u003E\u003Coption value=\u0022\u0022 selected=\u0022selected\u0022\u003E-- Select --\u003C\/option\u003E\u003Coption value=\u0022etree\u0022\u003EETree\u003C\/option\u003E\u003Coption value=\u0022etree_collection_back_end\u0022\u003EETree(back_end)\u003C\/option\u003E\u003Coption value=\u0022etree_collection_front_end\u0022\u003EETree(front_end)\u003C\/option\u003E\u003Coption value=\u0022etree_collection_projectman\u0022\u003EETree(projectman)\u003C\/option\u003E\u003Coption value=\u0022etree_collection_tasks\u0022\u003EETree(tasks)\u003C\/option\u003E\u003Coption value=\u0022etree_collection_tz\u0022\u003EETree(tz)\u003C\/option\u003E\u003C\/select\u003E\n\u003C!-- END OUTPUT from \u0027core\/themes\/classy\/templates\/form\/select.html.twig\u0027 --\u003E\n\n\n\n            \n\u003C\/div\u003E\n\n\u003C!-- END OUTPUT from \u0027themes\/custom\/druda_adminimal_theme\/templates\/form-element.html.twig\u0027 --\u003E\n\n\u003C\/div\u003E\n\u003C\/details\u003E\n\n\u003C!-- END OUTPUT from \u0027core\/themes\/seven\/templates\/details.html.twig\u0027 --\u003E\n\n\n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027input__submit\u0027 --\u003E\n\u003C!-- FILE NAME SUGGESTIONS:\n   * input--submit.html.twig\n   x input.html.twig\n--\u003E\n\u003C!-- BEGIN OUTPUT from \u0027core\/themes\/classy\/templates\/form\/input.html.twig\u0027 --\u003E\n\u003Cinput data-drupal-selector=\u0022edit-collection-views-add-new-button\u0022 type=\u0022submit\u0022 id=\u0022edit-collection-views-add-new-button--4hd3n1lJ2JA\u0022 name=\u0022op\u0022 value=\u0022\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c\u0022 class=\u0022button js-form-submit form-submit\u0022 \/\u003E\n\n\u003C!-- END OUTPUT from \u0027core\/themes\/classy\/templates\/form\/input.html.twig\u0027 --\u003E\n\n\u003C\/div\u003E\n\u003C\/details\u003E\n\n\u003C!-- END OUTPUT from \u0027core\/themes\/seven\/templates\/details.html.twig\u0027 --\u003E\n\n",
+    "settings": null
+  }
+]

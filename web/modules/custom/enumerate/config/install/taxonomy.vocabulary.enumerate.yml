@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - enumerate
+name: Enumeration categories
+vid: enumerate
+description: 'Enumerate categories vocabulary'
+hierarchy: 1
+weight: -10

@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains zurb_off_canvas.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function zurb_off_canvas_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the zurb_off_canvas module.
+    case 'help.page.zurb_off_canvas':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Zurb Foundation Off-canvas blocks') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page title templates.
+ */
+function zurb_off_canvas_preprocess_page(&$variables) {
+  $n = 0;
+
+  $variables['page']['content']['#attributes']['class'][] = 'off-canvas-content';
+  $variables['page']['content']['#attributes']['data-off-canvas-content'] = '';
+
+  //  $variables['pages']['off_canvas_left']['#attributes']['id'] = OffCanvasButtonLeft::getContainerId();
+  //  $variables['pages']['off_canvas_left']['#attributes']['class'] = ['off-canvas', 'position-left'];
+  //  $variables['pages']['off_canvas_left']['#attributes']['data-off-canvas'] = '';
+  //off-canvas position-left
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page title templates.
+ */
+function zurb_off_canvas_preprocess_html(&$variables) {
+
+  $n=0;
+}

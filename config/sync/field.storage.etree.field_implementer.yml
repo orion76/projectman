@@ -1,0 +1,20 @@
+uuid: 15547fe5-4ecd-4cc7-9364-7ae2165bed2b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - etree
+    - user
+id: etree.field_implementer
+field_name: field_implementer
+entity_type: etree
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

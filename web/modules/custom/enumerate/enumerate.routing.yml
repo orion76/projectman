@@ -1,0 +1,7 @@
+#enumerate.overview:
+#  path: '/admin/structure/enumerate'
+#  defaults:
+#    _controller: '\Drupal\book\Controller\BookController::adminOverview'
+#    _title: 'Books'
+#  requirements:
+#    _permission: 'administer book outlines'

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains etree_computed.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function etree_computed_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the etree_computed module.
+    case 'help.page.etree_computed':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('ETree entity field computed') . '</p>';
+      return $output;
+
+    default:
+  }
+}

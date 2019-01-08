@@ -1,0 +1,25 @@
+# Example aport_config_yml plugin definitions.
+# Plugin property $defaults are defined in AportConfigYmlManager.
+duma_api:
+  id: duma_api
+  label: "Duma API"
+  source:
+     plugin:
+     pluginClass: ''
+     config:
+     configClass: ''
+  parser:
+     plugin:
+     config:
+  process:
+     plugin:
+     config:
+  idMap:
+     plugin:
+     config:
+  map:
+     plugin:
+     config:
+  report:
+     plugin:
+     config:

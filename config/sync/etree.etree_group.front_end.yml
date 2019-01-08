@@ -1,0 +1,19 @@
+uuid: 417d91c0-8291-4e7b-8a26-100b8d642be1
+langcode: ru
+status: true
+dependencies: {  }
+label: 'Front end'
+id: front_end
+path: project/front-end
+allowed_types:
+  pm_plan: pm_plan
+  pm_task: pm_task
+  base: '0'
+tree_types:
+  pm_plan: pm_plan
+  base: '0'
+  pm_task: '0'
+child_types:
+  pm_task: pm_task
+  base: '0'
+  pm_plan: '0'

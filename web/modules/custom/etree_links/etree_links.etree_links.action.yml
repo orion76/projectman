@@ -1,0 +1,25 @@
+back_end.plan.collection:
+  actions:
+   - {bundle: 'pm_plan', action: 'add-form', title: 'Section'}
+  appears_on:
+     group_id: back_end
+     view_id: plan
+     action: collection
+
+back_end.plan.pm_plan.edit_form:
+  actions:
+    - {bundle: 'pm_plan', action: 'add-form', title: 'Subsection'}
+  appears_on:
+     group_id: back_end
+     view_id: plan
+     action: 'edit-form'
+     bundle: pm_plan
+
+back_end.plan.pm_plan.view:
+  actions:
+    - {bundle: 'pm_plan', action: 'add-form', title: 'Subsection'}
+  appears_on:
+     group_id: back_end
+     view_id: plan
+     action: 'view'
+     bundle: pm_plan

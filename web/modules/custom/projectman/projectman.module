@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains projectman.module.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function projectman_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the projectman module.
+    case 'help.page.projectman':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Project management system') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function projectman_link_alter(&$variables) {
+  $attributes = &$variables['options']['attributes'];
+
+  if (isset($attributes['data-dialog-type'])) {
+    $attributes['data-dialog-options'] = Json::encode([
+      'width' => '90%',
+    ]);
+  }
+
+}

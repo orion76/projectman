@@ -1,0 +1,3 @@
+#etree.actions:
+#  class: Drupal\etree_links\Plugin\Menu\LocalAction\ETreeLinksLocalAction
+#  deriver: Drupal\etree_links\Plugin\Derivative\ETreeLinksLocalActionDeriver

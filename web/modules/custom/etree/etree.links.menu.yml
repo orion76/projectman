@@ -1,0 +1,17 @@
+# ETree type menu items definition
+entity.etree_type.collection:
+  title: 'ETree'
+  route_name: entity.etree_type.collection
+  description: 'List ETree type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+entity.etree_type.add_form:
+  title: 'Add ETree type'
+  route_name: entity.etree_type.add_form
+  description: 'Add ETree type (bundle)'
+  parent: entity.etree_type.collection
+  weight: 99
+
+
+

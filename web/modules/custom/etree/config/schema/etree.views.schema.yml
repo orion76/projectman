@@ -1,0 +1,6 @@
+views.argument_default.etree_parent_id_from_url:
+  type: 'sequence'
+  label: 'Etree parent from current route'
+  sequence:
+    type: 'string'
+    label: 'ETree parent ID'

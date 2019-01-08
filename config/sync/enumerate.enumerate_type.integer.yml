@@ -1,0 +1,6 @@
+uuid: 150d92e8-c13f-49c5-8471-ab8e8b779b7a
+langcode: ru
+status: true
+dependencies: {  }
+id: integer
+label: Integer

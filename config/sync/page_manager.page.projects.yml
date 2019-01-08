@@ -1,0 +1,21 @@
+uuid: 070fdc5f-7cb3-4b59-bdec-90f9893cc2df
+langcode: ru
+status: true
+dependencies:
+  module:
+    - user
+id: projects
+label: Projects
+description: ''
+use_admin_theme: false
+path: /project
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      member: member
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

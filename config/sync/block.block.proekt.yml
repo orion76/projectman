@@ -1,0 +1,37 @@
+uuid: 2d6acbea-4e2a-4f03-a55c-cef5dffbe044
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.project
+  module:
+    - system
+    - user
+  theme:
+    - druda_adminimal_theme
+id: proekt
+theme: druda_adminimal_theme
+region: off_canvas_left
+weight: -8
+provider: null
+plugin: 'system_menu_block:project'
+settings:
+  id: 'system_menu_block:project'
+  label: Проект
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      member: member
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,126 @@
+<?php
+
+/**
+ * @file
+ * Contains etree.module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+use Drupal\etree\Entity\ETreeType;
+
+/**
+ * Implements hook_help().
+ */
+function etree_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the etree module.
+    case 'help.page.etree':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Entity Tree module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function etree_theme() {
+  $theme = [];
+
+  $theme['etree_collection_page'] = [
+    'variables' => ['collection' => NULL, 'overview' => NULL],
+    'file' => 'etree.page.inc',
+    'template' => 'etree-collection-page',
+  ];
+  $theme['etree'] = [
+    'render element' => 'elements',
+    'file' => 'etree.page.inc',
+    'template' => 'etree',
+  ];
+  $theme['etree_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'etree.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function etree_theme_suggestions_etree(array $variables) {
+  $suggestions = [];
+  /** @var \Drupal\etree\Entity\ETreeInterface $entity */
+  $entity = $variables['elements']['#etree'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'etree__' . $sanitized_view_mode;
+  $suggestions[] = 'etree__' . $entity->bundle();
+  $suggestions[] = 'etree__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'etree__' . $entity->id();
+  $suggestions[] = 'etree__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_entity_operation_alter().
+ */
+function etree_entity_operation_alter(array &$operations, EntityInterface $entity) {
+
+  //  $modal_configs = [
+  //    'entity.etree.edit_form' => TRUE,
+  //    'entity.etree.add_form' => TRUE,
+  //    'entity.etree.canonical' => TRUE,
+  //  ];
+  //
+  //
+  //  foreach ($operations as &$operation) {
+  //    /** @var Url $url */
+  //    $route_name = $operation['url']->getRouteName();
+  //    if (!isset($modal_configs[$route_name]) || FALSE === $modal_configs[$route_name]) {
+  //      continue;
+  //    }
+  //    $operation['attributes'] = ETreeCommon::linkModalAttributes();
+  //    $operation['#attached'] = ETreeCommon::linkModalAttached();
+  //
+  //  }
+}
+
+function etree_js_alter(&$javascript, \Drupal\Core\Asset\AttachedAssetsInterface $assets) {
+
+  $replace = [
+    'core/assets/vendor/jquery.ui/ui/widget-min.js' => 'core/assets/vendor/jquery.ui/full/widget.js',
+    'core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js' => 'core/assets/vendor/jquery.ui/full/widgets/dialog.js',
+  ];
+
+//  foreach ($replace as $origin => $full) {
+//    $javascript[$origin]['data'] = $full;
+//  }
+
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function etree_entity_extra_field_info() {
+  $extra = [];
+  $description = t('Etree module element');
+  foreach (ETreeType::loadMultiple() as $bundle) {
+    $extra['etree'][$bundle->id()]['display']['links'] = [
+      'label' => t('Links'),
+      'description' => $description,
+      'weight' => 100,
+      'visible' => TRUE,
+    ];
+  }
+
+  return $extra;
+}
+

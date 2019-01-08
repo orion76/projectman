@@ -1,0 +1,60 @@
+add enumerate entities:
+  title: 'Create new Enumerate entities'
+
+administer enumerate entities:
+  title: 'Administer Enumerate entities'
+  description: 'Allow to access the administration form to configure Enumerate entities.'
+  restrict access: true
+
+delete enumerate entities:
+  title: 'Delete Enumerate entities'
+
+edit enumerate entities:
+  title: 'Edit Enumerate entities'
+
+view published enumerate entities:
+  title: 'View published Enumerate entities'
+
+view unpublished enumerate entities:
+  title: 'View unpublished Enumerate entities'
+
+view all enumerate revisions:
+  title: 'View all Enumerate revisions'
+
+revert all enumerate revisions:
+  title: 'Revert all Enumerate revisions'
+  description: 'Role requires permission <em>view Enumerate revisions</em> and <em>edit rights</em> for enumerate entities in question or <em>administer enumerate entities</em>.'
+
+delete all enumerate revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Enumerate revisions</em> and <em>delete rights</em> for enumerate entities in question or <em>administer enumerate entities</em>.'
+add enumerate item entities:
+  title: 'Create new Enumerate item entities'
+
+administer enumerate item entities:
+  title: 'Administer Enumerate item entities'
+  description: 'Allow to access the administration form to configure Enumerate item entities.'
+  restrict access: true
+
+delete enumerate item entities:
+  title: 'Delete Enumerate item entities'
+
+edit enumerate item entities:
+  title: 'Edit Enumerate item entities'
+
+view published enumerate item entities:
+  title: 'View published Enumerate item entities'
+
+view unpublished enumerate item entities:
+  title: 'View unpublished Enumerate item entities'
+
+view all enumerate item revisions:
+  title: 'View all Enumerate item revisions'
+
+revert all enumerate item revisions:
+  title: 'Revert all Enumerate item revisions'
+  description: 'Role requires permission <em>view Enumerate item revisions</em> and <em>edit rights</em> for enumerate item entities in question or <em>administer enumerate item entities</em>.'
+
+delete all enumerate item revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Enumerate item revisions</em> and <em>delete rights</em> for enumerate item entities in question or <em>administer enumerate item entities</em>.'

@@ -1,0 +1,50 @@
+etree_group.views:
+  type: map
+
+
+etree.etree_group.*:
+  type: config_entity
+  label: 'Etree group config'
+  mapping:
+    label:
+      type: label
+      label: 'Name'
+    id:
+      type: string
+      label: 'Machine name'
+    uuid:
+      type: string
+    path:
+      type: string
+      label: Path
+    collection_views:
+      type: sequence
+      label: Collections views
+      sequence:
+      - type: mapping
+        label: ETree Views
+        mapping:
+          label:
+            type: label
+            label: 'Name'
+          id:
+            type: string
+            label: 'Machine name'
+          view_id:
+            type: string
+            label: View ID
+          display_id:
+            type: string
+            label: Display ID
+    etree_types:
+      type: sequence
+      label: 'Allowed ETree types for tree.'
+      sequence:
+        type: string
+        label: 'Bundle'
+    child_types:
+      type: sequence
+      label: 'Allowed ETree types for tree.'
+      sequence:
+        type: string
+        label: 'Bundle'

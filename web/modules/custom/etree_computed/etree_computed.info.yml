@@ -1,0 +1,8 @@
+name: 'etree_computed'
+type: module
+description: 'ETree entity field computed'
+dependencies:
+  - etree
+  - time_field
+core: 8.x
+package: 'etree'

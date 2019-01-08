@@ -1,0 +1,20 @@
+
+$contrast-warnings: false;
+
+$global-font-size: 120%;
+$font-size-small: $global-font-size/2;
+$global-width: rem-calc(1000);
+$global-lineheight: 1.2;
+
+//$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+//$body-font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-font-family: 'Roboto', 'Roboto-fallback', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+$global-radius: 0;
+$global-text-direction: ltr;
+$global-flexbox: false;
+$print-transparent-backgrounds: true;

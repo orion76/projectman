@@ -1,0 +1,10 @@
+uuid: 0064aca5-12bc-4ebe-87a3-716e45f1d328
+langcode: ru
+status: true
+dependencies:
+  module:
+    - etree
+id: etree.full
+label: full
+targetEntityType: etree
+cache: true

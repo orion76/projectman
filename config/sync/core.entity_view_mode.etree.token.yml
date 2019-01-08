@@ -1,0 +1,10 @@
+uuid: 2bdad401-f5cf-4f17-b14d-4602804dde74
+langcode: ru
+status: true
+dependencies:
+  module:
+    - etree
+id: etree.token
+label: Token
+targetEntityType: etree
+cache: true

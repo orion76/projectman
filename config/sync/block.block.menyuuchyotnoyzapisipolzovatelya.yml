@@ -1,0 +1,32 @@
+uuid: eab41c68-67ad-4421-bdf2-6eb17fb07067
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+    - user
+  theme:
+    - druda_adminimal_theme
+id: menyuuchyotnoyzapisipolzovatelya
+theme: druda_adminimal_theme
+region: toolbar_top_right
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Меню учётной записи пользователя'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,29 @@
+services:
+  aport.config_manager:
+    class: Drupal\aport\AportConfigYmlManager
+    arguments: ['@module_handler', '@cache.discovery']
+  aport.import_manager:
+    class: Drupal\aport\AportImportManager
+    arguments: []
+
+  aport.source_manager:
+    class: Drupal\aport\Plugin\aport_source\SourcePluginManager
+    parent: default_plugin_manager
+  aport.parser_manager:
+    class: Drupal\aport\Plugin\aport_parser\ParserPluginManager
+    parent: default_plugin_manager
+  aport.process_manager:
+    class: Drupal\aport\Plugin\aport_process\ProcessPluginManager
+    parent: default_plugin_manager
+  aport.map_manager:
+    class: Drupal\aport\Plugin\aport_map\MapPluginManager
+    parent: default_plugin_manager
+  aport.id_map_manager:
+    class: Drupal\aport\Plugin\aport_idmap\IdMapPluginManager
+    parent: default_plugin_manager
+  aport.destination_manager:
+    class: Drupal\aport\Plugin\aport_destination\DestinationPluginManager
+    parent: default_plugin_manager
+  aport.report_manager:
+    class: Drupal\aport\Plugin\aport_report\ReportPluginManager
+    parent: default_plugin_manager

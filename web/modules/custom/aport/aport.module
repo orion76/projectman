@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains aport.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function aport_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the aport module.
+    case 'help.page.aport':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('alter migrate') . '</p>';
+      return $output;
+
+    default:
+  }
+}

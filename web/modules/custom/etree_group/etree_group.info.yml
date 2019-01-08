@@ -1,0 +1,7 @@
+name: 'etree_group'
+type: module
+description: 'Etree entities groups'
+dependencies:
+  - etree_group
+core: 8.x
+package: 'etree'

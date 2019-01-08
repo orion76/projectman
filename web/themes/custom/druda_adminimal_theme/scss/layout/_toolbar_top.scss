@@ -1,0 +1,16 @@
+.toolbar-top {
+  display: flex;
+
+  .region-toolbar-top-right {
+    margin-left: auto;
+
+    li {
+      list-style: none;
+
+      a {
+        color: $palette-4-light;
+      }
+
+    }
+  }
+}

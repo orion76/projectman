@@ -1,0 +1,14 @@
+{
+  "name": "drupal/zurb_library",
+  "type": "drupal-module",
+  "description": "Zurb Foundation library helper",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/zurb_library",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/zurb_library",
+    "source": "http://cgit.drupalcode.org/zurb_library"
+  },
+  "require": { }
+}

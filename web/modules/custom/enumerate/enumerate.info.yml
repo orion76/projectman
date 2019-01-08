@@ -1,0 +1,5 @@
+name: 'enumerate'
+type: module
+description: 'Enumerate entity'
+core: 8.x
+package: 'gpb'

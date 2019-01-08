@@ -1,0 +1,9 @@
+services:
+  etree_group.helper:
+     class: Drupal\etree_group\EtreeGroupHelper
+     arguments: ['@entity_type.manager']
+  etree_group.breadcrumb:
+     class: Drupal\etree_group\Breadcrumb\EtreeGroupBreadcrumbBuilder
+     arguments: ['@entity_type.manager','@request_stack']
+     tags:
+      - { name: breadcrumb_builder, priority: 100 }

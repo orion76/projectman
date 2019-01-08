@@ -1,0 +1,25 @@
+
+.content-menu {
+
+  a {
+    @include button(false);
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    //align-content: right;
+  }
+
+  .menu {
+    @include xy-grid(horizontal);
+
+    &li {
+      @include xy-cell(full);
+    }
+  }
+}
+
+.menu {
+
+  &.icon-bar {
+    flex-wrap: nowrap;
+  }
+}

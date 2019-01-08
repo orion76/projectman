@@ -1,0 +1,83 @@
+uuid: af36d323-d70f-49d5-af7c-0f2b9aefaada
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.etree_comment.full
+    - core.entity_view_mode.etree.full
+    - etree.etree_type.pm_plan
+    - field.field.etree.pm_plan.field_comment
+    - field.field.etree.pm_plan.field_images
+    - field.field.etree.pm_plan.field_time_scheduled
+    - field.field.etree.pm_plan.field_time_spent
+  module:
+    - ajax_comments
+    - comment
+    - etree
+    - etree_computed
+    - text
+    - user
+id: etree.pm_plan.full
+targetEntityType: etree
+bundle: pm_plan
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comment:
+    type: comment_default
+    weight: 5
+    region: content
+    label: above
+    settings:
+      view_mode: full
+      pager_id: 0
+    third_party_settings:
+      ajax_comments:
+        enable_ajax_comments: '1'
+  field_time_scheduled:
+    type: etree_computed_time
+    weight: 2
+    region: content
+    label: above
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+  field_time_spent:
+    type: etree_computed_time
+    weight: 3
+    region: content
+    label: above
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: title
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  etree_code: true
+  etree_group: true
+  etree_level: true
+  etree_path: true
+  etree_weight: true
+  field_images: true
+  langcode: true
+  links: true
+  revision_log_message: true
+  status: true

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/etree_computed",
+  "type": "drupal-module",
+  "description": "ETree entity field computed",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/etree_computed",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/etree_computed",
+    "source": "http://cgit.drupalcode.org/etree_computed"
+  },
+  "require": { }
+}

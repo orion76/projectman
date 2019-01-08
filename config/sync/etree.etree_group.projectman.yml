@@ -1,0 +1,16 @@
+uuid: 51f661f1-e3b4-4408-8880-c1e0a3547abd
+langcode: ru
+status: true
+dependencies: {  }
+label: projectman
+id: projectman
+path: project/projectman
+collection_views: {  }
+tree_types:
+  base: '0'
+  pm_plan: '0'
+  pm_task: '0'
+child_types:
+  pm_task: pm_task
+  base: '0'
+  pm_plan: '0'

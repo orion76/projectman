@@ -1,0 +1,72 @@
+uuid: 44f55ff2-f44d-47b7-8ddd-fd2bdb69f9b5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.etree.full
+    - etree.etree_type.pm_task
+    - field.field.etree.pm_task.field_implementer
+    - field.field.etree.pm_task.field_time_scheduled
+    - field.field.etree.pm_task.field_time_spent
+  module:
+    - etree
+    - etree_computed
+    - text
+    - user
+id: etree.pm_task.full
+targetEntityType: etree
+bundle: pm_task
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_time_scheduled:
+    type: etree_computed_time
+    weight: 2
+    region: content
+    label: above
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+  field_time_spent:
+    type: etree_computed_time
+    weight: 3
+    region: content
+    label: above
+    settings:
+      time_format: 'h:i a'
+    third_party_settings: {  }
+  links:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    label: above
+    type: title
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  etree_code: true
+  etree_group: true
+  etree_level: true
+  etree_path: true
+  etree_weight: true
+  field_implementer: true
+  langcode: true
+  revision_log_message: true
+  status: true

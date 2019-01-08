@@ -1,0 +1,19 @@
+uuid: 1fb61505-f983-4676-b4db-b52fb34cdb56
+langcode: ru
+status: true
+dependencies: {  }
+label: TZ
+id: tz
+path: project/tz
+allowed_types:
+  pm_plan: pm_plan
+  pm_task: pm_task
+  base: '0'
+tree_types:
+  pm_plan: pm_plan
+  base: '0'
+  pm_task: '0'
+child_types:
+  pm_task: pm_task
+  base: '0'
+  pm_plan: '0'

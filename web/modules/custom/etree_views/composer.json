@@ -1,0 +1,14 @@
+{
+  "name": "drupal/etree_views",
+  "type": "drupal-module",
+  "description": "ETree views components (fields, filter and etc)",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/etree_views",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/etree_views",
+    "source": "http://cgit.drupalcode.org/etree_views"
+  },
+  "require": { }
+}

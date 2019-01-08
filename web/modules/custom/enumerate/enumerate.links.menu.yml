@@ -1,0 +1,45 @@
+
+# Enumerate menu items definition
+entity.enumerate.collection:
+  title: 'Enumerate'
+  route_name: entity.enumerate.collection
+  description: 'List Enumerate entities'
+  parent: system.admin_structure
+  weight: 1000
+
+
+
+#entity.enumerate.categories:
+#  title: 'Categories'
+#  route_name: entity.enumerate.categories
+#  description: 'Categories'
+#  parent: entity.enumerate.collection
+#  weight: 100
+
+
+# Enumerate type menu items definition
+entity.enumerate_type.collection:
+  title: 'Enumerate bundles'
+  route_name: entity.enumerate_type.collection
+  description: 'List Enumerate type (bundles)'
+  parent: entity.enumerate.collection
+  weight: 99
+
+
+# Enumerate item menu items definition
+entity.enumerate_item.collection:
+  title: 'Enumerate item list'
+  route_name: entity.enumerate_item.collection
+  description: 'List Enumerate item entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Enumerate item type menu items definition
+entity.enumerate_item_type.collection:
+  title: 'Item bundles'
+  route_name: entity.enumerate_item_type.collection
+  description: 'List Enumerate item type (bundles)'
+  parent: entity.enumerate.collection
+  weight: 99
+

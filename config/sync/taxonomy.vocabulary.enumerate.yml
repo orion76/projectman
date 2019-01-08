@@ -1,0 +1,14 @@
+uuid: fc8e838e-b2cd-41b2-8734-ee95c00dd01a
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - enumerate
+_core:
+  default_config_hash: OCcTqAFfGxXFJDXWg8WrTxn9-bVb0SR00xQ3AnOmBkk
+name: 'Enumeration categories'
+vid: enumerate
+description: 'Enumerate categories vocabulary'
+hierarchy: 1
+weight: -10

@@ -1,0 +1,5 @@
+services:
+  enumerate.route_subscriber:
+    class: Drupal\enumerate\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,5 @@
+services:
+ projectman.event_subscriber:
+   class: Drupal\projectman\EventSubscriber\ProjectmanEventSubscriber
+   tags:
+    - { name: event_subscriber }

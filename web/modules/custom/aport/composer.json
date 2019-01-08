@@ -1,0 +1,14 @@
+{
+  "name": "drupal/aport",
+  "type": "drupal-module",
+  "description": "alter migrate",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/aport",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/aport",
+    "source": "http://cgit.drupalcode.org/aport"
+  },
+  "require": { }
+}

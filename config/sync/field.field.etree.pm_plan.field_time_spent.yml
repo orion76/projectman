@@ -1,0 +1,26 @@
+uuid: 64dccbd1-7ea2-42c7-a251-fb95bb6483a6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - etree.etree_type.pm_plan
+    - field.storage.etree.field_time_spent
+  module:
+    - etree_computed
+id: etree.pm_plan.field_time_spent
+field_name: field_time_spent
+entity_type: etree
+bundle: pm_plan
+label: Время(факт)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  input_self: 0
+  bundles:
+    pm_plan: pm_plan
+    pm_task: pm_task
+  operation: sum
+field_type: etree_computed_time

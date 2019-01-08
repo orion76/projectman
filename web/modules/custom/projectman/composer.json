@@ -1,0 +1,14 @@
+{
+  "name": "drupal/projectman",
+  "type": "drupal-module",
+  "description": "Project management system",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/projectman",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/projectman",
+    "source": "http://cgit.drupalcode.org/projectman"
+  },
+  "require": { }
+}

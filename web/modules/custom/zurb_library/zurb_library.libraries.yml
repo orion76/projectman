@@ -1,0 +1,33 @@
+ajax_command:
+  js:
+    js/commands.js: {}
+  dependencies:
+    - core/drupal.ajax
+
+core:
+  version: 1.x
+  js:
+    js/foundation.js: {}
+#    /libraries/foundation-sites/dist/js/foundation.js: {}
+    /libraries/foundation-sites/dist/js/plugins/foundation.core.js: {}
+    /libraries/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+offcanvas:
+  version: 1.x
+  js:
+    /libraries/foundation-sites/dist/js/plugins/foundation.util.keyboard.js: {}
+    /libraries/foundation-sites/dist/js/plugins/foundation.offcanvas.js: {}
+  dependencies:
+    - zurb_library/toggler
+
+toggler:
+  version: 1.x
+  js:
+    /libraries/foundation-sites/dist/js/plugins/foundation.util.motion.js: {}
+    /libraries/foundation-sites/dist/js/plugins/foundation.util.triggers.js: {}
+    /libraries/foundation-sites/dist/js/plugins/foundation.toggler.js: {}
+  dependencies:
+    - zurb_library/core

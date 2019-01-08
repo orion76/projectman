@@ -1,0 +1,5 @@
+entity.etree_type.add_form:
+  route_name: entity.etree_type.add_form
+  title: 'Add ETree type'
+  appears_on:
+    - entity.etree_type.collection

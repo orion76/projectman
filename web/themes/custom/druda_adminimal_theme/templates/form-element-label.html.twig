@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a form element label.
+ *
+ * Available variables:
+ * - title: The label's text.
+ * - title_display: Elements title_display setting.
+ * - required: An indicator for whether the associated form element is required.
+ * - attributes: A list of HTML attributes for the label.
+ *
+ * @see template_preprocess_form_element_label()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set classes = [
+    title_display == 'after' ? 'option',
+    title_display == 'invisible' ? 'visually-hidden',
+    required ? 'js-form-required',
+    required ? 'form-required',
+] %}
+
+{% set description_classes = [
+    'description',
+    description_display == 'invisible' ? 'visually-hidden',
+] %}
+
+{% if title is not empty or required -%}
+    <label{{ attributes.addClass(classes) }}>
+        {{ title }}
+        {% if description.content %}
+            <i class="fas fa-question-circle"></i>
+            <div{{ description.attributes.addClass(description_classes) }}>
+                {{ description.content }}
+            </div>
+        {%- endif %}
+    </label>
+{%- endif %}

@@ -1,0 +1,447 @@
+@charset "utf-8";
+// =========
+// This file is a custom file that loads all files. Each non-base layer
+// can be disabled.
+//
+// Do not name this file "druda_zurb.scss". This file should be named
+// THEMENAME.scss.
+//
+// This application file (THEMENAME.scss) is where all the partials are
+// imported.
+//
+// Theme styles are categorized using SMACSS standards. They utilize
+// categorization of styles into various categories. Those categories are the
+// following:
+//
+// - Base: CSS reset/normalize plus HTML element styling.
+// - Layout: Macro arrangement of a web page, including any grid systems.
+// - Modules: Dictate minor layout modules or reusable elements.
+// - States: Describe the appearance of a module in various states.
+// - Theme: Specific customizations for your subtheme.
+// For more information about this new Drupal css file standard, please review
+// the following:
+// - https://drupal.org/node/1887922
+// - http://smacss.com/
+// =========
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
+// Make sure the charset is set appropriately
+//This is your _settings.scss file where you can override foundation variables.
+@import '_settings/colors';
+@import '_settings/settings';
+// Core
+
+@import 'components/button';
+
+// The following imports bootstrap the theme.
+@import './foundation';
+
+// Set flex to true to enable the new Foundation 6 flex grid.
+
+@include foundation-everything($flex);
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+//@include foundation-flex-classes;
+//@include foundation-flex-grid;
+
+// Components
+@import './components/label';
+@import './components/form';
+
+// Import our mixins early so they can be used by other partials.
+// Optional.
+@import 'base/mixins';
+
+// Common file is where you place common utility classes to extend or
+// parametrics.
+// Optional.
+@import 'base/common';
+
+// Drupal specific styles (to fix Drupalisms).
+@import 'base/drupal';
+
+// Styling for elements.
+// Optional.
+// @import 'base/elements';
+
+// Layout
+// Each section of the document has it's own partial seperated out to improve
+// developer experience. Additionally, grids can be declared in layouts as well.
+@import 'layout/toolbar_top';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/sidebar';
+@import 'layout/footer';
+
+// Modules
+@import 'modules/block';
+@import 'modules/button';
+@import 'modules/topbar';
+
+// States
+// @import 'states/collapse';
+
+// Themes
+@import 'theme/entity_view';
+@import 'theme/views_blocks';
+@import 'theme/breadcrumb';
+@import 'theme/menu';
+@import 'theme/comments';
+@import 'theme/news';
+@import 'theme/dialog';
+@import 'theme/ckeditor_admin';
+@import 'theme/off_canvas';
+// Older IE support
+// @import 'vendor/ie';
+
+.palette {
+  @include xy-grid(horizontal, wrap);
+  color: $light-gray;
+
+  .palette-item {
+    @include xy-cell(2);
+
+    .palette-1 {
+      background-color: $palette-1;
+    }
+
+    .palette-1-light {
+      background-color: $palette-1-light;
+    }
+
+    .palette-1-dark {
+      background-color: $palette-1-dark;
+    }
+
+    .palette-2 {
+      background-color: $palette-2;
+    }
+
+    .palette-2-light {
+      background-color: $palette-2-light;
+    }
+
+    .palette-2-dark {
+      background-color: $palette-2-dark;
+    }
+
+    .palette-3 {
+      background-color: $palette-3;
+    }
+
+    .palette-3-light {
+      background-color: $palette-3-light;
+    }
+
+    .palette-3-dark {
+      background-color: $palette-3-dark;
+    }
+
+    .palette-4 {
+      background-color: $palette-4;
+    }
+
+    .palette-4-light {
+      background-color: $palette-4-light;
+    }
+
+    .palette-4-dark {
+      background-color: $palette-4-dark;
+    }
+
+    .palette-5 {
+      background-color: $palette-5;
+    }
+
+    .palette-5-light {
+      background-color: $palette-5-light;
+    }
+
+    .palette-5-dark {
+      background-color: $palette-5-dark;
+    }
+  }
+}
+
+main {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.off-canvas-content {
+
+  height: 100%;
+}
+
+.page-content {
+  padding-bottom: 2rem;
+}
+
+//.field-label-inline{
+//  @include :
+//}
+
+.field-item {
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.solution-card {
+
+  .card-divider {
+    border-bottom: 3px solid $medium-gray;
+  }
+
+  .solution-info {
+    background: $medium-gray;
+    padding: 10px;
+  }
+  //.field-wrapper {
+  //  &.field-label-inline {
+  //    display: flex;
+  //
+
+  //  }
+  //}
+}
+
+@media screen and (min-width: 40em) {
+
+  .title-bar {
+    display: none;
+  }
+}
+
+.page-footer {
+  background-color: $palette-1;
+  color: $white;
+  min-height: 10em;
+
+  a {
+    color: $palette-1-light;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.is-page-form {
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+
+    em {
+      color: $dark-gray;
+    }
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  .button {
+    @include small-button();
+  }
+}
+
+input.form-text,
+textarea.form-textarea,
+select.form-select,
+input.form-date,
+input.form-url {
+  border: 1px solid $white;
+  border-left: 1px solid $gray;
+  border-radius: 0;
+  box-shadow: 0 0 15px rgba(200, 200, 200, .5);
+
+  &:focus {
+    border: 1px solid #9c9;
+    border-left: 1px solid #9c9;
+    outline: none;
+    transition: none;
+  }
+
+}
+
+.filter-guidelines {
+  color: $medium-gray;
+  font-size: .7em;
+}
+
+form {
+  @include xy-grid(column, wrap);
+
+}
+
+.field--type-address,
+.field--type-entity-reference,
+.field--type-string-long,
+.field--type-datetime,
+.field--type-string {
+  .form-item {
+    align-content: center;
+    border-top: 1px solid $medium-gray;
+    //display: flex;
+    //justify-content: space-between;
+    padding: 1rem 0;
+
+    input, textarea {
+      margin: 0;
+    }
+
+    input,
+    & > div {
+      flex-basis: 50%;
+      padding: .5em;
+    }
+
+    label {
+      padding-right: .5rem;
+    }
+  }
+}
+
+.field--type-link {
+
+  a.tabledrag-handle .handle {
+    height: 100%;
+  }
+
+  tr {
+    display: flex;
+  }
+
+  td:not(.field-multiple-drag) {
+    display: flex;
+    justify-content: space-between;
+
+    .js-form-type-textfield {
+      flex-basis: 50%;
+      order: -1;
+    }
+
+    .js-form-type-url {
+      flex-basis: 50%;
+    }
+
+    .form-item {
+      padding: 0 5px;
+    }
+  }
+}
+
+@mixin druda-block-title() {
+  background-color: $palette-5-light;
+  color: $white;
+  font-size: 2.5em;
+  font-weight: 700;
+  padding-left: .3em;
+}
+
+@mixin druda-date-string() {
+  background-color: $light-gray;
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 5px 10px;
+}
+
+@mixin druda-views-list-row($bg-color,$border-color) {
+  background-color: $bg-color;
+  border-left: 3px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1em;
+  margin-bottom: .5rem;
+  padding: .5em;
+}
+
+@mixin druda-block-views-list() {
+  padding: .5em;
+
+  .block-title {
+    @include druda-block-title;
+  }
+
+  h3 {
+    @include druda-date-string;
+  }
+
+  h4 {
+    font-size: 1.1em
+  }
+
+  .views-row {
+    @include druda-views-list-row($light-gray, $palette-5);
+  }
+}
+
+.block-views-block-party-news-block-1 {
+  @include druda-block-views-list;
+}
+
+.block-views-block-party-events-block-1 {
+  @include druda-block-views-list;
+}
+
+.field-name-field-source {
+  color: #ff7970;
+  background-color: #ffeeee;
+  padding: 1rem;
+  a {
+    color: #76858b
+  }
+}
+
+h1 {
+  color: #b7241b;
+  font-size: 1.5em;
+}
+
+.is-dropdown-submenu {
+  box-shadow: rgba(150, 150, 150, .5) 0 2px 10px;
+
+  a {
+    display: block;
+    width: 100%;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+
+}
+
+.field-user--user-picture {
+  width: 100px;
+}
+
+//.field-wrapper{
+//  display: flex;
+//
+//  padding: 10px 0;
+//  .field-label{
+//    font-weight: bold;
+//    width: 35%;
+//    &:after{
+//      content:':'
+//    }
+//  }
+//}

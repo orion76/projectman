@@ -1,0 +1,5 @@
+services:
+ etree_computed.event_subscriber:
+   class: Drupal\etree_computed\EventSubscriber\ComputedEventSubscriber
+   tags:
+    - { name: event_subscriber }

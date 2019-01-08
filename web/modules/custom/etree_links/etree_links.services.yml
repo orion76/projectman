@@ -1,0 +1,4 @@
+services:
+  plugin.manager.etree_links:
+    class: Drupal\etree_links\Plugin\ETreeLinksPluginManager
+    arguments: ['@current_route_match', '@router.route_provider', '@module_handler', '@cache.discovery', '@language_manager', '@access_manager', '@current_user']
