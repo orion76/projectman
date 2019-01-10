@@ -1,0 +1,14 @@
+
+# Time tracker entity menu items definition
+entity.time_tracker_entity.collection:
+  title: 'Time tracker entity list'
+  route_name: entity.time_tracker_entity.collection
+  description: 'List Time tracker entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+time_tracker_entity.admin.structure.settings:
+  title: 'Time tracker entity settings'
+  description: 'Configure Time tracker entity entities'
+  route_name: time_tracker_entity.settings
+  parent: system.admin_structure
