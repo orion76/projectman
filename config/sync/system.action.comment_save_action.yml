@@ -1,5 +1,5 @@
-uuid: eef12307-5e1e-400b-b709-191272a3ff6f
-langcode: ru
+uuid: dcff6cee-98a9-4d83-835a-0a5c61068b7c
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: lfyE_snmvfg_EQ3VDyhUtGAXgmqtEiqa46I3bTMg8DU
 id: comment_save_action
-label: 'Сохранить комментарий'
+label: 'Save comment'
 type: comment
 plugin: 'entity:save_action:comment'
 configuration: {  }

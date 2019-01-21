@@ -1,5 +1,5 @@
-uuid: 67491e15-d62a-4bff-81e3-8323505e68a1
-langcode: ru
+uuid: beaa45f0-5cbb-49ad-8570-1f3a07365584
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -7,8 +7,8 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - gpb@yandex.ru
+  - admin@example.com
 reply: ''
 weight: 0
-message: 'Ваше сообщение отправлено.'
+message: 'Your message has been sent.'
 redirect: ''

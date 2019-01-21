@@ -1,5 +1,5 @@
-uuid: f0634e57-2fdc-49ad-af87-399b3dfc4a03
-langcode: ru
+uuid: 06545323-59f6-4209-8a4f-0017a3da169b
+langcode: en
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Брендинг сайта'
+  label: 'Site branding'
   provider: system
   label_display: '0'
   use_site_logo: true

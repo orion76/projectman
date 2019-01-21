@@ -1,5 +1,5 @@
-uuid: c9f8d1e6-3919-46eb-9edf-499ec1d658fd
-langcode: ru
+uuid: be1a9fd7-0ca8-4480-9f63-ebeb84c64bad
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: Mz9qWr1kUYK0mjRAGDsr5XS6PvtZ24en_7ndt-pyWe4
 id: node.teaser
-label: Анонс
+label: Teaser
 targetEntityType: node
 cache: true

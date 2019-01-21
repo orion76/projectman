@@ -1,6 +1,0 @@
-uuid: 2f4c99ea-be2d-4e30-a64c-ce2dfe9f30c0
-langcode: ru
-status: true
-dependencies: {  }
-id: pm_task
-label: Исполнитель

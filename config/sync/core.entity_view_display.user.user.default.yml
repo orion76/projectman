@@ -1,5 +1,5 @@
-uuid: c7cec1c0-8900-4182-8255-47dc54326bc2
-langcode: ru
+uuid: bccf6498-e99e-4909-b95a-84a5bfdf704b
+langcode: en
 status: true
 dependencies:
   config:
@@ -27,5 +27,4 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden:
-  langcode: true
+hidden: {  }

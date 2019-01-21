@@ -1,11 +1,11 @@
-uuid: 3cac4b6a-d478-445e-bcd7-7c292921df86
-langcode: ru
+uuid: 0a5eabec-cd79-4049-9559-74e8db65914b
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Анонимный пользователь'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:

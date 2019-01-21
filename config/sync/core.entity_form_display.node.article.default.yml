@@ -1,5 +1,5 @@
-uuid: daf1cc4f-03fb-414a-9e9b-db46962d9712
-langcode: ru
+uuid: 0ab0a0f2-0b03-416b-b4e5-969b3c8991e7
+langcode: en
 status: true
 dependencies:
   config:
@@ -58,13 +58,6 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
     third_party_settings: {  }
   path:
     type: path
