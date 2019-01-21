@@ -1,5 +1,5 @@
-uuid: cfe71614-17e1-4a48-83ff-2eba71476ee4
-langcode: ru
+uuid: 8a841049-527f-4bb7-8a45-67f421bae618
+langcode: en
 status: true
 dependencies:
   config:
@@ -12,7 +12,7 @@ id: node.article.field_tags
 field_name: field_tags
 entity_type: node
 bundle: article
-label: Теги
+label: Tags
 description: 'Enter a comma-separated list. For example: Amsterdam, Mexico City, "Cleveland, Ohio"'
 required: false
 translatable: true

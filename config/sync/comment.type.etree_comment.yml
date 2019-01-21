@@ -1,8 +1,0 @@
-uuid: a4f73a76-4e5c-4748-8d13-6f1b01bbb0d2
-langcode: ru
-status: true
-dependencies: {  }
-id: etree_comment
-label: etree_comment
-target_entity_type_id: etree
-description: ''

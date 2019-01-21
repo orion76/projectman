@@ -1,5 +1,5 @@
-uuid: 9859f564-9c8a-4f1a-bc03-12b37f7a040a
-langcode: ru
+uuid: dec0df42-f4bc-4708-a531-2c1eaa0d5799
+langcode: en
 status: true
 dependencies:
   module:
@@ -30,6 +30,12 @@ filters:
     provider: filter
     status: true
     weight: 8
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
     settings: {  }
   editor_file_reference:
     id: editor_file_reference

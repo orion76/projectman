@@ -1,11 +1,11 @@
-uuid: 26bafa7d-7ad8-4468-997d-2fef3a3cc058
-langcode: ru
+uuid: bb259f8f-e2f0-47c1-8fb0-6e5e60cc92c1
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: cCiWdBHgLwj5omG35lsKc4LkW4MBdmcctkVop4ol5x0
 name: thumbnail
-label: 'Миниатюра (100×100)'
+label: 'Thumbnail (100×100)'
 effects:
   1cfec298-8620-4749-b100-ccb6c4500779:
     uuid: 1cfec298-8620-4749-b100-ccb6c4500779

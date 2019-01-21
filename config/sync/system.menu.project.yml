@@ -1,8 +1,0 @@
-uuid: 0a2e0c44-31c6-4ff2-bea6-90cead8845b5
-langcode: ru
-status: true
-dependencies: {  }
-id: project
-label: Проект
-description: ''
-locked: false

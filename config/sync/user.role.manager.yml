@@ -1,9 +1,0 @@
-uuid: 1b8b1003-e558-46c4-bab0-5789e40b19b7
-langcode: ru
-status: true
-dependencies: {  }
-id: manager
-label: manager
-weight: 5
-is_admin: null
-permissions: {  }

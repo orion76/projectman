@@ -1,5 +1,5 @@
-uuid: d565750a-de3e-4958-8619-87d11d95be6c
-langcode: ru
+uuid: 4e78bb82-ddee-4252-99c3-f9e928589429
+langcode: en
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.article.body
 field_name: body
 entity_type: node
 bundle: article
-label: Содержимое
+label: Body
 description: ''
 required: false
 translatable: true

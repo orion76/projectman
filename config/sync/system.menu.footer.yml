@@ -1,10 +1,10 @@
-uuid: 8b6b78af-00ef-4eb2-a0a1-bb853893f8ac
-langcode: ru
+uuid: c20a14b9-10cf-41d5-87cc-0d3ac431c106
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer
-label: Подвал
-description: 'Ссылки информации о сайте'
+label: Footer
+description: 'Site information links'
 locked: true

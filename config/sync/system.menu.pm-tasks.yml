@@ -1,8 +1,0 @@
-uuid: ddc04716-9c7b-4c4e-ab77-4fcd345d58ac
-langcode: ru
-status: true
-dependencies: {  }
-id: pm-tasks
-label: Задачи
-description: ''
-locked: false

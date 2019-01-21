@@ -1,8 +1,0 @@
-uuid: c635850f-2d9b-492b-ae13-8c067e2aa061
-langcode: ru
-status: true
-dependencies: {  }
-id: user-work
-label: 'Моя работа'
-description: ''
-locked: false
