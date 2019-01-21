@@ -71,7 +71,9 @@
         "drupal/adminimal_theme": "^1.4",
         "drupal/foundation_patterns": "^1.0@alpha",
         "drupal/zurb_foundation": "^5.0@beta",
-        "drupal/config_update": "^1.6"
+        "drupal/config_update": "^1.6",
+        "drupal/config_split": "^1.4",
+        "drupal/config_readonly": "^1.0@beta"
     },
     "require-dev": {
         "drupal/console": "^1.0.2",
