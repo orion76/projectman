@@ -1,194 +1,106 @@
 {
-  "name": "drupal-composer/drupal-project",
-  "description": "Project template for Drupal 8 projects with composer",
-  "type": "project",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "",
-      "role": ""
-    }
-  ],
-  "repositories": {
-    "0": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    "1": {
-      "type": "package",
-      "package": {
-        "name": "ckeditor-plugin/uploadimage",
-        "version": "4.8.0",
-        "type": "drupal-library",
-        "extra": {
-          "installer-name": "uploadimage"
+    "name": "drupal-composer/projectman",
+    "license": "proprietary",
+    "type": "project",
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
         },
-        "dist": {
-          "url": "https://download.ckeditor.com/uploadimage/releases/uploadimage_4.8.0.zip",
-          "type": "zip"
+        "asset-packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
-      }
     },
-    "2": {
-      "type": "package",
-      "package": {
-        "name": "ckeditor-plugin/uploadwidget",
-        "version": "4.8.0",
-        "type": "drupal-library",
-        "extra": {
-          "installer-name": "uploadwidget"
+    "require": {
+        "composer/installers": "^1.2.0",
+        "cweagans/composer-patches": "^1.6.4",
+        "drupal/composerize": "1.x-dev",
+        "drupal-composer/drupal-scaffold": "^2.4",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "wikimedia/composer-merge-plugin": "^1.4.1",
+        "drupal/core": "8.6.7",
+        "drupal/admin_toolbar": "^1.25",
+        "drupal/admin_toolbar_links_access_filter": "^1.25",
+        "drupal/admin_toolbar_tools": "^1.25",
+        "drupal/ajax_comments": "^1.0@beta",
+        "drupal/auto_entitylabel": "^2.1@beta",
+        "drupal/ckeditor_uploadimage": "^1.5",
+        "drupal/config_update_ui": "^1.6",
+        "drupal/content_browser": "^1.0@alpha",
+        "drupal/ctools": "^3.0",
+        "drupal/ctools_block": "^3.0",
+        "drupal/devel": "^1.2",
+        "drupal/devel_generate": "^1.2",
+        "drupal/kint": "^1.2",
+        "drupal/webprofiler": "^2.0@RC",
+        "drupal/ds": "^3.2",
+        "drupal/ds_devel": "^3.2",
+        "drupal/ds_extras": "^3.2",
+        "drupal/ds_switch_view_mode": "^3.2",
+        "drupal/embed": "^1.0",
+        "drupal/entity": "^1.0-rc1",
+        "drupal/entity_browser": "^2.0",
+        "drupal/entity_browser_entity_form": "^2.0",
+        "drupal/entity_browser_example": "^2.0",
+        "drupal/entity_embed": "^1.0@beta",
+        "drupal/entity_form_block": "1.x-dev",
+        "drupal/entityblock": "^1.0",
+        "drupal/features": "^3.8",
+        "drupal/features_ui": "^3.8",
+        "drupal/field_group_migrate": "^1.0",
+        "drupal/field_group": "^1.0",
+        "drupal/formblock": "^1.0@beta",
+        "drupal/group": "^1.0@RC",
+        "drupal/gnode": "^1.0@RC",
+        "drupal/grolesync": "^1.0@RC",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/insert": "^1.0",
+        "drupal/module_filter": "^3.1",
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/page_manager_ui": "^4.0@beta",
+        "drupal/panels": "^4.3",
+        "drupal/panels_ipe": "^4.3",
+        "drupal/pathauto": "^1.3",
+        "drupal/profile": "^1.0@RC",
+        "drupal/time_field": "^1.10",
+        "drupal/token": "^1.5",
+        "drupal/actions_permissions": "^2.4",
+        "drupal/views_bulk_operations_example": "^2.4",
+        "drupal/views_bulk_operations": "^2.4",
+        "drupal/adminimal_theme": "^1.4",
+        "drupal/foundation_patterns": "^1.0@alpha",
+        "drupal/zurb_foundation": "^5.0@beta",
+        "drupal/config_update": "^1.6"
+    },
+    "require-dev": {
+        "drupal/console": "^1.0.2",
+        "drush/drush": "^9.0.0"
+    },
+    "extra": {
+        "enable-patching": true,
+        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "web/libraries/{$name}": ["type:drupal-library", "type:bower-asset", "type:npm-asset"],
+            "drush/contrib/{$name}": ["type:drupal-drush"],
+            "special/package/dir/": ["my/package"]
         },
-        "dist": {
-          "url": "https://download.ckeditor.com/uploadwidget/releases/uploadwidget_4.8.0.zip",
-          "type": "zip"
-        }
-      }
-    },
-    "3": {
-      "type": "package",
-      "package": {
-        "name": "ckeditor-plugin/filetools",
-        "version": "4.8.0",
-        "type": "drupal-library",
-        "extra": {
-          "installer-name": "filetools"
+        "merge-plugin": {
+            "include": [
+                "web/modules/custom/*/composer.json"
+            ],
+            "replace": false,
+            "ignore-duplicates": true
         },
-        "dist": {
-          "url": "https://download.ckeditor.com/filetools/releases/filetools_4.8.0.zip",
-          "type": "zip"
-        }
-      }
+        "patches": {}
     },
-    "4": {
-      "type": "package",
-      "package": {
-        "name": "ckeditor-plugin/notification",
-        "version": "4.8.0",
-        "type": "drupal-library",
-        "extra": {
-          "installer-name": "notification"
-        },
-        "dist": {
-          "url": "https://download.ckeditor.com/notification/releases/notification_4.8.0.zip",
-          "type": "zip"
-        }
-      }
-    },
-    "5": {
-      "type": "package",
-      "package": {
-        "name": "ckeditor-plugin/notificationaggregator",
-        "version": "4.8.0",
-        "type": "drupal-library",
-        "extra": {
-          "installer-name": "notificationaggregator"
-        },
-        "dist": {
-          "url": "https://download.ckeditor.com/notificationaggregator/releases/notificationaggregator_4.8.0.zip",
-          "type": "zip"
-        }
-      }
-    }
-  },
-  "require": {
-    "ccampbell/chromephp": "^4.1",
-    "ckeditor-plugin/filetools": "4.8.0",
-    "ckeditor-plugin/notification": "4.8.0",
-    "ckeditor-plugin/notificationaggregator": "4.8.0",
-    "ckeditor-plugin/uploadimage": "4.8.0",
-    "ckeditor-plugin/uploadwidget": "4.8.0",
-    "composer/installers": "^1.2",
-    "cweagans/composer-patches": "^1.6.5",
-    "drupal-composer/drupal-scaffold": "^2.5",
-    "drupal/admin_toolbar": "^1.24",
-    "drupal/adminimal_theme": "^1.3",
-    "drupal/auto_entitylabel": "^2.1@beta",
-    "drupal/ckeditor_uploadimage": "^1.5",
-    "drupal/console": "^1.0.2",
-    "drupal/content_browser": "^1.0@alpha",
-    "drupal/core": "^8.6.0",
-    "drupal/devel": "^1.2",
-    "drupal/entity_browser": "^1.5",
-    "drupal/field_group": "^1.0",
-    "drupal/foundation_patterns": "^1.0@alpha",
-    "drupal/group": "^1.0@RC",
-    "drupal/inline_entity_form": "^1.0@RC",
-    "drupal/pathauto": "^1.2",
-    "drupal/profile": "^1.0@RC",
-    "drupal/token": "^1.3",
-    "drupal/zurb_foundation": "^6.0",
-    "drush/drush": "^9.0.0",
-    "vlucas/phpdotenv": "^2.4",
-    "webflo/drupal-finder": "^1.0.0",
-    "webmozart/path-util": "^2.3",
-    "zurb/foundation": "^6.5"
-  },
-  "require-dev": {
-    "webflo/drupal-core-require-dev": "^8.6.0"
-  },
-  "conflict": {
-    "drupal/drupal": "*"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "config": {
-    "sort-packages": true
-  },
-  "autoload": {
-    "classmap": [
-      "scripts/composer/ScriptHandler.php"
-    ],
-    "files": [
-      "load.environment.php"
-    ]
-  },
-  "scripts": {
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "post-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ],
-    "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ]
-  },
-  "extra": {
-    "patchLevel": {
-      "drupal/core": "-p2"
-    },
-    "installer-paths": {
-      "web/libraries/ckeditor/plugins/{$name}": [
-        "vendor:ckeditor-plugin"
-      ],
-      "web/core": [
-        "type:drupal-core"
-      ],
-      "web/libraries/{$name}": [
-        "type:drupal-library",
-        "vendor:zurb"
-      ],
-      "web/modules/contrib/{$name}": [
-        "type:drupal-module"
-      ],
-      "web/profiles/contrib/{$name}": [
-        "type:drupal-profile"
-      ],
-      "web/themes/contrib/{$name}": [
-        "type:drupal-theme"
-      ],
-      "drush/Commands/{$name}": [
-        "type:drupal-drush"
-      ]
-    },
-    "drupal-scaffold": {
-      "initial": {
-        ".editorconfig": "../.editorconfig",
-        ".gitattributes": "../.gitattributes"
-      }
-    }
-  }
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
