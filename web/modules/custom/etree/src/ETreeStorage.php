@@ -155,10 +155,10 @@ class ETreeStorage extends EntityFullStorage implements ETreeStorageInterface {
   /**
    * {@inheritdoc}
    */
-  public function updateHierarchy($record) {
+  public function updateHierarchy(array $hierarchy_data) {
 
-    $this->getHierarchy()->deleteIds($record['id']);
-    $this->getHierarchy()->insert($record);
+    $this->getHierarchy()->deleteIds($hierarchy_data['id']);
+    $this->getHierarchy()->insert($hierarchy_data);
   }
 
   /**
