@@ -1,0 +1,5 @@
+name: 'etree_time_tracker'
+type: module
+description: 'Etree time tracker'
+core: 8.x
+package: 'etree'
