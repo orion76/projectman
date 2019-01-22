@@ -1,0 +1,19 @@
+add time tracker entity entities:
+  title: 'Create new Time tracker entity entities'
+
+administer time tracker entity entities:
+  title: 'Administer Time tracker entity entities'
+  description: 'Allow to access the administration form to configure Time tracker entity entities.'
+  restrict access: true
+
+delete time tracker entity entities:
+  title: 'Delete Time tracker entity entities'
+
+edit time tracker entity entities:
+  title: 'Edit Time tracker entity entities'
+
+view published time tracker entity entities:
+  title: 'View published Time tracker entity entities'
+
+view unpublished time tracker entity entities:
+  title: 'View unpublished Time tracker entity entities'
